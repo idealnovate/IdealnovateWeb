@@ -94,6 +94,7 @@ export default function Navigation() {
                 src="/nav-logo.png"
                 alt="Idealnovate Africa"
                 fill
+                sizes="144px"
                 className="object-contain object-left"
               />
             </div>
