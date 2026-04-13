@@ -1,6 +1,7 @@
 "use client";
 
-import { Target, Briefcase, Users, Globe, BarChart, Shield, Cpu, HeartHandshake } from "lucide-react";
+import Image from "next/image";
+import { Target, Briefcase, Users, Globe, BarChart, Shield, Cpu, HeartHandshake, ArrowRight } from "lucide-react";
 
 const reasons = [
   {
@@ -101,33 +102,83 @@ export default function WhyIdealnovate() {
           ))}
         </div>
 
-        {/* Bottom visual */}
-        <div className="mt-16 bg-gradient-to-r from-[#022c28] via-[#068276] to-[#0a9e90] rounded-3xl p-8 lg:p-12 overflow-hidden relative">
-          <div className="absolute inset-0 opacity-10"
-            style={{ backgroundImage: "radial-gradient(circle at 80% 50%, #f4a85e 0%, transparent 60%)" }}
-          />
-          <div className="relative z-10 grid lg:grid-cols-2 gap-8 items-center">
-            <div>
-              <h3 className="font-[Montserrat] font-bold text-2xl lg:text-3xl text-white mb-4">
-                Ready to transform your career in 90 days?
-              </h3>
-              <p className="text-white/75 font-[Montserrat] font-light leading-relaxed">
-                Join thousands of Africans who have gone from zero to employed using our proven learning system.
-              </p>
+        {/* ── Gradient 50/50 CTA banner ── */}
+        <div className="mt-16 rounded-3xl overflow-hidden">
+          <div className="grid lg:grid-cols-2 min-h-[360px] lg:min-h-[420px]">
+
+            {/* LEFT — Brand gradient with CTA */}
+            <div className="relative bg-gradient-to-br from-[#022c28] via-[#033d38] to-[#068276] flex items-center px-8 sm:px-10 lg:px-14 py-12 lg:py-16">
+              {/* Subtle decorative dot grid */}
+              <div
+                className="absolute inset-0 opacity-[0.06]"
+                style={{
+                  backgroundImage:
+                    "radial-gradient(circle, rgba(255,255,255,0.8) 1px, transparent 1px)",
+                  backgroundSize: "24px 24px",
+                }}
+              />
+              {/* Soft radial glow */}
+              <div
+                className="absolute bottom-0 left-0 w-72 h-72 opacity-20 blur-3xl"
+                style={{ background: "radial-gradient(circle, #f4a85e 0%, transparent 70%)" }}
+              />
+
+              <div className="relative z-10 max-w-md">
+                <span className="inline-flex items-center gap-2 px-3 py-1 bg-white/10 border border-white/20 rounded-full text-white/80 text-xs font-semibold font-[Montserrat] mb-5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#f4a85e] animate-pulse" />
+                  Transform Your Career
+                </span>
+
+                <h3 className="font-[Montserrat] font-bold text-2xl sm:text-3xl lg:text-4xl text-white leading-tight mb-4">
+                  Ready to transform your career in 90 days?
+                </h3>
+
+                <p className="text-white/70 font-[Montserrat] text-sm sm:text-base leading-relaxed mb-8">
+                  Join thousands of Africans who have gone from zero to employed using our proven learning system.
+                </p>
+
+                <div className="flex flex-wrap gap-3">
+                  <a
+                    href="/company/scholarships"
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-[#f4a85e] text-white font-bold rounded-lg hover:bg-[#e8903e] transition-all shadow-sm font-[Montserrat] text-sm group"
+                  >
+                    Apply for Scholarship
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </a>
+                  <a
+                    href="/learn/design-school"
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-white/10 border border-white/25 text-white font-semibold rounded-lg hover:bg-white/20 transition-all font-[Montserrat] text-sm"
+                  >
+                    Browse Programmes
+                  </a>
+                </div>
+              </div>
             </div>
-            <div className="flex flex-wrap gap-4 lg:justify-end">
-              <a
-                href="/company/scholarships"
-                className="px-7 py-3.5 bg-[#f4a85e] text-white font-bold rounded-lg hover:bg-[#e8903e] transition-all shadow-sm font-[Montserrat] text-sm"
-              >
-                Apply for Scholarship
-              </a>
-              <a
-                href="/learn/design-school"
-                className="px-7 py-3.5 bg-white/10 border border-white/30 text-white font-semibold rounded-lg hover:bg-white/20 transition-all font-[Montserrat] text-sm"
-              >
-                Browse Programmes
-              </a>
+
+            {/* RIGHT — Idealnovatehero image with gradient blend on left edge */}
+            <div className="relative min-h-[280px] lg:min-h-0">
+              <Image
+                src="/Idealhero.jpg"
+                alt="Idealnovate learners"
+                fill
+                className="object-cover object-center"
+              />
+              {/* Gradient blend — fades left edge into the brand colour */}
+              <div
+                className="absolute inset-0"
+                style={{
+                  background:
+                    "linear-gradient(to right, #068276 0%, rgba(6,130,118,0.5) 25%, rgba(6,130,118,0.1) 55%, transparent 100%)",
+                }}
+              />
+              {/* Subtle dark vignette on bottom for depth */}
+              <div
+                className="absolute inset-0"
+                style={{
+                  background:
+                    "linear-gradient(to top, rgba(2,44,40,0.4) 0%, transparent 50%)",
+                }}
+              />
             </div>
           </div>
         </div>
