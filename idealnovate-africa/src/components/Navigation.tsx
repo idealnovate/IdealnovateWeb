@@ -122,13 +122,8 @@ export default function Navigation() {
           : "bg-white/95 backdrop-blur-sm"
       }`}
     >
-<<<<<<< HEAD
-      {/* Top announcement bar */}
-      <div className="bg-[#163d3a] text-white text-center py-2 text-xs font-medium tracking-wide">
-=======
       {/* Announcement bar */}
       <div className="bg-[#022c28] text-white text-center py-2 text-xs font-medium tracking-wide">
->>>>>>> 1e8bf6eadf59e0123d4dd49dce39c53b45d6ba47
         <span>🎓 Scholarship applications now open — </span>
         <Link href="/company/scholarships" className="underline hover:text-[#f9ba48] transition-colors font-semibold">
           Apply Today →
@@ -164,15 +159,7 @@ export default function Navigation() {
                     }`}
                   >
                     {item.label}
-<<<<<<< HEAD
-                    <ChevronDown
-                      className={`w-3.5 h-3.5 transition-transform duration-200 ${
-                        activeMenu === item.label ? "rotate-180 text-[#266D67]" : ""
-                      }`}
-                    />
-=======
                     <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${activeMenu === item.label ? "rotate-180 text-[#068276]" : ""}`} />
->>>>>>> 1e8bf6eadf59e0123d4dd49dce39c53b45d6ba47
                   </button>
                 ) : (
                   <Link
@@ -186,11 +173,7 @@ export default function Navigation() {
                 {/* First-level dropdown */}
                 {item.children.length > 0 && (
                   <div
-<<<<<<< HEAD
-                    className={`absolute top-full left-0 mt-1 bg-white rounded-2xl shadow-2xl shadow-[#266D67]/15 border border-[#e2efee] overflow-hidden transition-all duration-200 ${
-=======
                     className={`absolute top-full left-0 mt-1 bg-white rounded-2xl shadow-2xl shadow-[#068276]/15 border border-[#e8f5f3] overflow-visible transition-all duration-200 ${
->>>>>>> 1e8bf6eadf59e0123d4dd49dce39c53b45d6ba47
                       activeMenu === item.label
                         ? "opacity-100 translate-y-0 pointer-events-auto"
                         : "opacity-0 -translate-y-2 pointer-events-none"
@@ -201,18 +184,6 @@ export default function Navigation() {
                       {item.children.map((child) => (
                         <div
                           key={child.label}
-<<<<<<< HEAD
-                          href={child.href}
-                          className="flex items-start gap-3 px-4 py-3 rounded-xl hover:bg-[#eef6f5] group/item transition-all duration-150"
-                          onClick={() => setActiveMenu(null)}
-                        >
-                          <span className="mt-0.5 w-8 h-8 rounded-lg bg-[#eef6f5] flex items-center justify-center text-[#266D67] group-hover/item:bg-[#266D67] group-hover/item:text-white transition-all duration-150 shrink-0">
-                            {child.icon}
-                          </span>
-                          <div>
-                            <div className="text-sm font-semibold text-[#163d3a] group-hover/item:text-[#266D67] transition-colors font-[Montserrat]">
-                              {child.label}
-=======
                           className="relative"
                           onMouseEnter={() => child.subItems && setActiveSubMenu(child.label)}
                           onMouseLeave={() => child.subItems && setActiveSubMenu(null)}
@@ -239,7 +210,6 @@ export default function Navigation() {
                                 {child.label}
                               </div>
                               <div className="text-xs text-gray-500 mt-0.5 font-[Montserrat] truncate">{child.desc}</div>
->>>>>>> 1e8bf6eadf59e0123d4dd49dce39c53b45d6ba47
                             </div>
                             {child.subItems && (
                               <ChevronRight className={`w-3.5 h-3.5 shrink-0 transition-colors ${activeSubMenu === child.label ? "text-[#068276]" : "text-gray-300"}`} />
@@ -287,13 +257,7 @@ export default function Navigation() {
                         </div>
                       ))}
                     </div>
-<<<<<<< HEAD
-                    <div className="px-4 pb-3">
-                      <div className="h-px bg-[#e2efee]" />
-                    </div>
-=======
                     <div className="px-4 pb-3"><div className="h-px bg-[#e8f5f3]" /></div>
->>>>>>> 1e8bf6eadf59e0123d4dd49dce39c53b45d6ba47
                   </div>
                 )}
               </div>
@@ -302,23 +266,10 @@ export default function Navigation() {
 
           {/* CTA Buttons */}
           <div className="hidden lg:flex items-center gap-3">
-<<<<<<< HEAD
-            <Link
-              href="/signin"
-              className="px-5 py-2 text-sm font-semibold text-[#266D67] border border-[#266D67] rounded-lg hover:bg-[#266D67] hover:text-white transition-all duration-200 font-[Montserrat]"
-            >
-              Sign In
-            </Link>
-            <Link
-              href="/company/scholarships"
-              className="px-5 py-2 text-sm font-semibold text-white bg-[#266D67] rounded-lg hover:bg-[#163d3a] transition-all duration-200 shadow-sm font-[Montserrat]"
-            >
-=======
             <Link href="/signin" className="px-5 py-2 text-sm font-semibold text-[#068276] border border-[#068276] rounded-lg hover:bg-[#068276] hover:text-white transition-all duration-200 font-[Montserrat]">
               Sign In
             </Link>
             <Link href="/company/scholarships" className="px-5 py-2 text-sm font-semibold text-white bg-[#068276] rounded-lg hover:bg-[#022c28] transition-all duration-200 shadow-sm font-[Montserrat]">
->>>>>>> 1e8bf6eadf59e0123d4dd49dce39c53b45d6ba47
               Get Scholarship Access
             </Link>
           </div>
@@ -334,19 +285,9 @@ export default function Navigation() {
         </div>
       </div>
 
-<<<<<<< HEAD
-      {/* Mobile Menu */}
-      <div
-        className={`lg:hidden overflow-hidden transition-all duration-300 ${
-          mobileOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
-        }`}
-      >
-        <div className="bg-white border-t border-[#e2efee] px-4 py-4 space-y-1 max-h-[80vh] overflow-y-auto">
-=======
       {/* ── Mobile Menu ─────────────────────────────────────────────── */}
       <div className={`lg:hidden overflow-hidden transition-all duration-300 ${mobileOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"}`}>
         <div className="bg-white border-t border-[#e8f5f3] px-4 py-4 space-y-1 max-h-[80vh] overflow-y-auto">
->>>>>>> 1e8bf6eadf59e0123d4dd49dce39c53b45d6ba47
           {navItems.map((item) => (
             <div key={item.label}>
               {item.children.length > 0 ? (
@@ -357,32 +298,13 @@ export default function Navigation() {
                     onClick={() => setMobileExpanded(mobileExpanded === item.label ? null : item.label)}
                   >
                     {item.label}
-<<<<<<< HEAD
-                    <ChevronDown
-                      className={`w-4 h-4 text-[#266D67] transition-transform ${
-                        mobileExpanded === item.label ? "rotate-180" : ""
-                      }`}
-                    />
-=======
                     <ChevronDown className={`w-4 h-4 text-[#068276] transition-transform ${mobileExpanded === item.label ? "rotate-180" : ""}`} />
->>>>>>> 1e8bf6eadf59e0123d4dd49dce39c53b45d6ba47
                   </button>
 
                   {/* Children */}
                   <div className={`overflow-hidden transition-all duration-200 ${mobileExpanded === item.label ? "max-h-[600px]" : "max-h-0"}`}>
                     <div className="pl-4 py-1 space-y-1">
                       {item.children.map((child) => (
-<<<<<<< HEAD
-                        <Link
-                          key={child.label}
-                          href={child.href}
-                          className="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-[#eef6f5] text-sm text-gray-600 hover:text-[#266D67] transition-colors font-[Montserrat]"
-                          onClick={() => setMobileOpen(false)}
-                        >
-                          <span className="text-[#266D67]">{child.icon}</span>
-                          {child.label}
-                        </Link>
-=======
                         <div key={child.label}>
                           {child.subItems ? (
                             <>
@@ -429,7 +351,6 @@ export default function Navigation() {
                             </Link>
                           )}
                         </div>
->>>>>>> 1e8bf6eadf59e0123d4dd49dce39c53b45d6ba47
                       ))}
                     </div>
                   </div>
@@ -446,27 +367,11 @@ export default function Navigation() {
             </div>
           ))}
 
-<<<<<<< HEAD
-          <div className="pt-3 pb-1 flex flex-col gap-3 border-t border-[#e2efee] mt-2">
-            <Link
-              href="/signin"
-              className="text-center px-5 py-3 text-sm font-semibold text-[#266D67] border border-[#266D67] rounded-lg hover:bg-[#266D67] hover:text-white transition-all font-[Montserrat]"
-              onClick={() => setMobileOpen(false)}
-            >
-              Sign In
-            </Link>
-            <Link
-              href="/company/scholarships"
-              className="text-center px-5 py-3 text-sm font-semibold text-white bg-[#266D67] rounded-lg hover:bg-[#163d3a] transition-all shadow-sm font-[Montserrat]"
-              onClick={() => setMobileOpen(false)}
-            >
-=======
           <div className="pt-3 pb-1 flex flex-col gap-3 border-t border-[#e8f5f3] mt-2">
             <Link href="/signin" className="text-center px-5 py-3 text-sm font-semibold text-[#068276] border border-[#068276] rounded-lg hover:bg-[#068276] hover:text-white transition-all font-[Montserrat]" onClick={() => setMobileOpen(false)}>
               Sign In
             </Link>
             <Link href="/company/scholarships" className="text-center px-5 py-3 text-sm font-semibold text-white bg-[#068276] rounded-lg hover:bg-[#022c28] transition-all shadow-sm font-[Montserrat]" onClick={() => setMobileOpen(false)}>
->>>>>>> 1e8bf6eadf59e0123d4dd49dce39c53b45d6ba47
               Get Scholarship Access
             </Link>
           </div>
