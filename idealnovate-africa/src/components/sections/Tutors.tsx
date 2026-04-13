@@ -15,9 +15,9 @@ const tutors = [
     courses: 8,
     students: 2800,
     avatar: "SA",
-    color: "#068276",
-    bgFrom: "#068276",
-    bgTo: "#022c28",
+    color: "#266D67",
+    bgFrom: "#266D67",
+    bgTo: "#163d3a",
   },
   {
     name: "Amara Okafor",
@@ -29,9 +29,9 @@ const tutors = [
     courses: 6,
     students: 1940,
     avatar: "AO",
-    color: "#022c28",
-    bgFrom: "#022c28",
-    bgTo: "#068276",
+    color: "#163d3a",
+    bgFrom: "#163d3a",
+    bgTo: "#266D67",
   },
   {
     name: "Tunde Fashola",
@@ -43,9 +43,9 @@ const tutors = [
     courses: 5,
     students: 2100,
     avatar: "TF",
-    color: "#f4a85e",
-    bgFrom: "#f4a85e",
-    bgTo: "#e8903e",
+    color: "#f9ba48",
+    bgFrom: "#f9ba48",
+    bgTo: "#d4a030",
   },
   {
     name: "Chisom Nwosu",
@@ -57,9 +57,9 @@ const tutors = [
     courses: 4,
     students: 1350,
     avatar: "CN",
-    color: "#0a9e90",
-    bgFrom: "#0a9e90",
-    bgTo: "#022c28",
+    color: "#2d8a84",
+    bgFrom: "#2d8a84",
+    bgTo: "#163d3a",
   },
   {
     name: "Fatima Al-Hassan",
@@ -71,9 +71,9 @@ const tutors = [
     courses: 3,
     students: 3400,
     avatar: "FA",
-    color: "#068276",
-    bgFrom: "#068276",
-    bgTo: "#0a9e90",
+    color: "#266D67",
+    bgFrom: "#266D67",
+    bgTo: "#2d8a84",
   },
   {
     name: "Emeka Daniels",
@@ -85,9 +85,9 @@ const tutors = [
     courses: 5,
     students: 1680,
     avatar: "ED",
-    color: "#022c28",
-    bgFrom: "#022c28",
-    bgTo: "#068276",
+    color: "#163d3a",
+    bgFrom: "#163d3a",
+    bgTo: "#266D67",
   },
 ];
 
@@ -99,14 +99,14 @@ export default function Tutors() {
         {/* ── Header ── */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12 lg:mb-16">
           <div>
-            <span className="inline-flex items-center gap-2 px-4 py-2 bg-[#e8f5f3] text-[#068276] text-sm font-semibold rounded-full mb-4 font-[Montserrat]">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#068276]" />
+            <span className="inline-flex items-center gap-2 px-4 py-2 bg-[#e2efee] text-[#266D67] text-sm font-semibold rounded-full mb-4 font-[Montserrat]">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#266D67]" />
               Learn from the Best
             </span>
-            <h2 className="font-[Montserrat] font-bold text-3xl sm:text-4xl lg:text-5xl text-[#022c28] leading-tight">
+            <h2 className="font-[Montserrat] font-bold text-3xl sm:text-4xl lg:text-5xl text-[#163d3a] leading-tight">
               Our World-Class
               <br />
-              <span className="text-[#068276]">Tutors & Mentors</span>
+              <span className="text-[#266D67]">Tutors & Mentors</span>
             </h2>
           </div>
           <p className="text-gray-500 font-[Montserrat] max-w-md lg:text-right leading-relaxed text-sm sm:text-base">
@@ -119,7 +119,7 @@ export default function Tutors() {
           {tutors.map((tutor) => (
             <div
               key={tutor.name}
-              className="group bg-white rounded-3xl overflow-hidden border border-gray-100 hover:border-transparent hover:shadow-2xl hover:shadow-[#068276]/10 transition-all duration-400 hover:-translate-y-2 flex flex-col"
+              className="group bg-white rounded-3xl overflow-hidden border border-gray-100 hover:border-transparent hover:shadow-2xl hover:shadow-[#266D67]/10 transition-all duration-400 hover:-translate-y-2 flex flex-col"
             >
               {/* ── Avatar panel ── */}
               <div
@@ -152,7 +152,7 @@ export default function Tutors() {
 
                 {/* Name + role */}
                 <div className="mb-4">
-                  <h3 className="font-[Montserrat] font-bold text-[#022c28] text-lg leading-tight">
+                  <h3 className="font-[Montserrat] font-bold text-[#163d3a] text-lg leading-tight">
                     {tutor.name}
                   </h3>
                   <p className="font-[Montserrat] text-sm font-semibold mt-0.5" style={{ color: tutor.color }}>
@@ -173,7 +173,7 @@ export default function Tutors() {
                   {tutor.companies.map((c) => (
                     <span
                       key={c}
-                      className="px-2.5 py-0.5 rounded-full text-[11px] font-bold font-[Montserrat] bg-[#f0faf8] text-[#068276]"
+                      className="px-2.5 py-0.5 rounded-full text-[11px] font-bold font-[Montserrat] bg-[#eef6f5] text-[#266D67]"
                     >
                       {c}
                     </span>
@@ -190,7 +190,7 @@ export default function Tutors() {
           <p className="text-gray-400 font-[Montserrat] text-sm mb-3">Are you an industry expert?</p>
           <Link
             href="/company/partnership"
-            className="inline-flex items-center gap-2 text-[#068276] font-bold hover:text-[#022c28] transition-colors font-[Montserrat] text-sm"
+            className="inline-flex items-center gap-2 text-[#266D67] font-bold hover:text-[#163d3a] transition-colors font-[Montserrat] text-sm"
           >
             Join our team of instructors <ArrowRight className="w-4 h-4" />
           </Link>

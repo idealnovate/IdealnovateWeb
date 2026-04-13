@@ -68,18 +68,18 @@ export default function FAQ() {
   );
 
   return (
-    <section className="section-padding bg-[#f7fbfa]">
+    <section className="section-padding bg-[#f4f9f8]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-3 gap-12 lg:gap-16">
           {/* Left sidebar */}
           <div>
-            <span className="inline-flex items-center gap-2 px-4 py-2 bg-[#e8f5f3] text-[#068276] text-sm font-semibold rounded-full mb-4 font-[Montserrat]">
+            <span className="inline-flex items-center gap-2 px-4 py-2 bg-[#e2efee] text-[#266D67] text-sm font-semibold rounded-full mb-4 font-[Montserrat]">
               <HelpCircle className="w-3.5 h-3.5" />
               Got Questions?
             </span>
-            <h2 className="font-[Montserrat] font-bold text-3xl sm:text-4xl text-[#022c28] leading-tight mb-4">
+            <h2 className="font-[Montserrat] font-bold text-3xl sm:text-4xl text-[#163d3a] leading-tight mb-4">
               Frequently Asked
-              <span className="text-[#068276]"> Questions</span>
+              <span className="text-[#266D67]"> Questions</span>
             </h2>
             <p className="text-gray-500 font-[Montserrat] font-light leading-relaxed mb-8">
               Answers to the most common questions from learners, visitors, and recruiting partners.
@@ -93,8 +93,8 @@ export default function FAQ() {
                   onClick={() => { setActiveCategory(cat); setOpenIndex(null); }}
                   className={`w-full text-left px-4 py-3 rounded-lg text-sm font-semibold transition-all font-[Montserrat] ${
                     activeCategory === cat
-                      ? "bg-[#068276] text-white shadow-sm"
-                      : "bg-white text-gray-600 hover:bg-[#f0faf8] hover:text-[#068276] border border-gray-100"
+                      ? "bg-[#266D67] text-white shadow-sm"
+                      : "bg-white text-gray-600 hover:bg-[#eef6f5] hover:text-[#266D67] border border-gray-100"
                   }`}
                 >
                   {cat}
@@ -103,12 +103,12 @@ export default function FAQ() {
             </div>
 
             {/* Contact CTA */}
-            <div className="mt-8 p-5 bg-[#022c28] rounded-2xl">
+            <div className="mt-8 p-5 bg-[#163d3a] rounded-2xl">
               <p className="font-[Montserrat] font-bold text-white text-sm mb-2">Still have questions?</p>
               <p className="text-white/60 text-xs font-[Montserrat] mb-4">Our team is ready to help you make the right decision.</p>
               <Link
                 href="mailto:hello@idealnovate.com"
-                className="block text-center py-2.5 bg-[#f4a85e] text-white font-bold text-xs rounded-lg hover:bg-[#e8903e] transition-all font-[Montserrat]"
+                className="block text-center py-2.5 bg-[#f9ba48] text-white font-bold text-xs rounded-lg hover:bg-[#d4a030] transition-all font-[Montserrat]"
               >
                 Contact Support
               </Link>
@@ -123,8 +123,8 @@ export default function FAQ() {
                   key={i}
                   className={`bg-white rounded-2xl border overflow-hidden transition-all duration-200 ${
                     openIndex === i
-                      ? "border-[#068276]/30 shadow-lg shadow-[#068276]/8"
-                      : "border-gray-100 hover:border-[#068276]/20"
+                      ? "border-[#266D67]/30 shadow-lg shadow-[#266D67]/8"
+                      : "border-gray-100 hover:border-[#266D67]/20"
                   }`}
                 >
                   <button
@@ -136,25 +136,25 @@ export default function FAQ() {
                         className="text-xs font-bold px-2 py-0.5 rounded-full shrink-0 mt-0.5 font-[Montserrat]"
                         style={{
                           background: faq.category === "Learners"
-                            ? "#f0faf8"
+                            ? "#eef6f5"
                             : faq.category === "Hiring Partners"
                             ? "#fff8f0"
-                            : "#f7fbfa",
+                            : "#f4f9f8",
                           color: faq.category === "Learners"
-                            ? "#068276"
+                            ? "#266D67"
                             : faq.category === "Hiring Partners"
-                            ? "#f4a85e"
-                            : "#022c28",
+                            ? "#f9ba48"
+                            : "#163d3a",
                         }}
                       >
                         {faq.category}
                       </span>
-                      <span className="font-[Montserrat] font-bold text-[#022c28] text-sm leading-snug">
+                      <span className="font-[Montserrat] font-bold text-[#163d3a] text-sm leading-snug">
                         {faq.q}
                       </span>
                     </div>
                     <ChevronDown
-                      className={`w-5 h-5 text-[#068276] shrink-0 transition-transform duration-200 mt-0.5 ${
+                      className={`w-5 h-5 text-[#266D67] shrink-0 transition-transform duration-200 mt-0.5 ${
                         openIndex === i ? "rotate-180" : ""
                       }`}
                     />

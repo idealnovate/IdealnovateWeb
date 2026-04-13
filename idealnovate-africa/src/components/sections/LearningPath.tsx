@@ -19,10 +19,10 @@ const paths = [
       "Community support access",
     ],
     icon: <BookOpen className="w-7 h-7" />,
-    color: "#068276",
-    bgColor: "#f0faf8",
+    color: "#266D67",
+    bgColor: "#eef6f5",
     badge: "Beginner",
-    badgeColor: "#068276",
+    badgeColor: "#266D67",
     href: "/learn/design-school",
     popular: false,
   },
@@ -41,10 +41,10 @@ const paths = [
       "Career readiness coaching",
     ],
     icon: <Layers className="w-7 h-7" />,
-    color: "#022c28",
-    bgColor: "#022c28",
+    color: "#163d3a",
+    bgColor: "#163d3a",
     badge: "Most Popular",
-    badgeColor: "#f4a85e",
+    badgeColor: "#f9ba48",
     href: "/learn/design-school",
     popular: true,
   },
@@ -63,10 +63,10 @@ const paths = [
       "Professional certification",
     ],
     icon: <Zap className="w-7 h-7" />,
-    color: "#f4a85e",
+    color: "#f9ba48",
     bgColor: "#fff8f0",
     badge: "Expert",
-    badgeColor: "#f4a85e",
+    badgeColor: "#f9ba48",
     href: "/learn/design-school",
     popular: false,
   },
@@ -78,13 +78,13 @@ export default function LearningPath() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
-          <span className="inline-flex items-center gap-2 px-4 py-2 bg-[#f0faf8] text-[#068276] text-sm font-semibold rounded-full mb-4 font-[Montserrat]">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#068276]" />
+          <span className="inline-flex items-center gap-2 px-4 py-2 bg-[#eef6f5] text-[#266D67] text-sm font-semibold rounded-full mb-4 font-[Montserrat]">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#266D67]" />
             Your Roadmap to Success
           </span>
-          <h2 className="font-[Montserrat] font-bold text-3xl sm:text-4xl lg:text-5xl text-[#022c28] leading-tight">
+          <h2 className="font-[Montserrat] font-bold text-3xl sm:text-4xl lg:text-5xl text-[#163d3a] leading-tight">
             Choose Your
-            <span className="text-[#068276]"> Learning Path</span>
+            <span className="text-[#266D67]"> Learning Path</span>
           </h2>
           <p className="mt-4 text-gray-500 text-lg font-[Montserrat] font-light leading-relaxed">
             Whether you&apos;re starting fresh or levelling up, we have a structured path that meets you exactly where you are.
@@ -98,20 +98,20 @@ export default function LearningPath() {
               key={path.title}
               className={`relative group rounded-3xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl ${
                 path.popular
-                  ? "shadow-2xl shadow-[#022c28]/20 scale-105"
-                  : "shadow-lg hover:shadow-[#068276]/10"
+                  ? "shadow-2xl shadow-[#163d3a]/20 scale-105"
+                  : "shadow-lg hover:shadow-[#266D67]/10"
               }`}
               style={{
                 animationDelay: `${index * 0.1}s`,
               }}
             >
               {path.popular && (
-                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#f4a85e] to-[#068276]" />
+                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#f9ba48] to-[#266D67]" />
               )}
 
               <div
                 className={`p-8 h-full flex flex-col ${
-                  path.popular ? "bg-[#022c28] text-white" : "bg-white border border-gray-100"
+                  path.popular ? "bg-[#163d3a] text-white" : "bg-white border border-gray-100"
                 }`}
               >
                 {/* Level & Badge */}
@@ -126,8 +126,8 @@ export default function LearningPath() {
                   <span
                     className={`px-3 py-1 text-xs font-bold rounded-full font-[Montserrat]`}
                     style={{
-                      background: path.popular ? "#f4a85e" : "#f0faf8",
-                      color: path.popular ? "white" : "#068276",
+                      background: path.popular ? "#f9ba48" : "#eef6f5",
+                      color: path.popular ? "white" : "#266D67",
                     }}
                   >
                     {path.badge}
@@ -138,8 +138,8 @@ export default function LearningPath() {
                 <div
                   className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-5 ${
                     path.popular
-                      ? "bg-white/10 text-[#f4a85e]"
-                      : "bg-[#f0faf8] text-[#068276]"
+                      ? "bg-white/10 text-[#f9ba48]"
+                      : "bg-[#eef6f5] text-[#266D67]"
                   }`}
                 >
                   {path.icon}
@@ -149,14 +149,14 @@ export default function LearningPath() {
                 <div className="flex-1">
                   <p
                     className={`text-sm font-semibold uppercase tracking-wider mb-1 font-[Montserrat] ${
-                      path.popular ? "text-[#f4a85e]" : "text-[#068276]"
+                      path.popular ? "text-[#f9ba48]" : "text-[#266D67]"
                     }`}
                   >
                     {path.subtitle}
                   </p>
                   <h3
                     className={`font-[Montserrat] font-bold text-2xl mb-3 ${
-                      path.popular ? "text-white" : "text-[#022c28]"
+                      path.popular ? "text-white" : "text-[#163d3a]"
                     }`}
                   >
                     {path.title}
@@ -181,7 +181,7 @@ export default function LearningPath() {
                         className={`inline-flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-full font-[Montserrat] font-medium ${
                           path.popular
                             ? "bg-white/10 text-white/70"
-                            : "bg-[#f7fbfa] text-gray-600"
+                            : "bg-[#f4f9f8] text-gray-600"
                         }`}
                       >
                         {meta.icon}
@@ -195,7 +195,7 @@ export default function LearningPath() {
                     {path.features.map((f) => (
                       <li key={f} className={`flex items-start gap-2.5 text-sm font-[Montserrat] ${path.popular ? "text-white/80" : "text-gray-600"}`}>
                         <CheckCircle
-                          className={`w-4 h-4 mt-0.5 shrink-0 ${path.popular ? "text-[#f4a85e]" : "text-[#068276]"}`}
+                          className={`w-4 h-4 mt-0.5 shrink-0 ${path.popular ? "text-[#f9ba48]" : "text-[#266D67]"}`}
                         />
                         {f}
                       </li>
@@ -208,8 +208,8 @@ export default function LearningPath() {
                   href={path.href}
                   className={`group/btn flex items-center justify-center gap-2 py-3.5 px-6 rounded-lg font-bold text-sm transition-all duration-200 shadow-sm font-[Montserrat] ${
                     path.popular
-                      ? "bg-[#f4a85e] text-white hover:bg-[#e8903e]"
-                      : "bg-[#022c28] text-white hover:bg-[#068276]"
+                      ? "bg-[#f9ba48] text-white hover:bg-[#d4a030]"
+                      : "bg-[#163d3a] text-white hover:bg-[#266D67]"
                   }`}
                 >
                   Explore Programme
@@ -225,7 +225,7 @@ export default function LearningPath() {
           <p className="text-gray-500 font-[Montserrat] mb-4">Not sure which path to take?</p>
           <Link
             href="/company/scholarships"
-            className="inline-flex items-center gap-2 text-[#068276] font-bold hover:text-[#022c28] transition-colors font-[Montserrat] text-sm"
+            className="inline-flex items-center gap-2 text-[#266D67] font-bold hover:text-[#163d3a] transition-colors font-[Montserrat] text-sm"
           >
             <Award className="w-4 h-4" />
             Take our free career assessment →

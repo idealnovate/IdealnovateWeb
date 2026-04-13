@@ -54,19 +54,19 @@ const metrics = [
 
 export default function WhyIdealnovate() {
   return (
-    <section className="section-padding bg-[#f7fbfa]">
+    <section className="section-padding bg-[#f4f9f8]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-end mb-16 lg:mb-20">
           <div>
-            <span className="inline-flex items-center gap-2 px-4 py-2 bg-[#e8f5f3] text-[#068276] text-sm font-semibold rounded-full mb-4 font-[Montserrat]">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#068276]" />
+            <span className="inline-flex items-center gap-2 px-4 py-2 bg-[#e2efee] text-[#266D67] text-sm font-semibold rounded-full mb-4 font-[Montserrat]">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#266D67]" />
               Why We Stand Out
             </span>
-            <h2 className="font-[Montserrat] font-bold text-3xl sm:text-4xl lg:text-5xl text-[#022c28] leading-tight">
+            <h2 className="font-[Montserrat] font-bold text-3xl sm:text-4xl lg:text-5xl text-[#163d3a] leading-tight">
               The Smarter Path to
               <br />
-              <span className="text-[#068276]">Your Dream Career</span>
+              <span className="text-[#266D67]">Your Dream Career</span>
             </h2>
           </div>
           <div>
@@ -79,8 +79,8 @@ export default function WhyIdealnovate() {
         {/* Metrics highlight strip */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-16">
           {metrics.map((m) => (
-            <div key={m.value} className="bg-[#022c28] rounded-2xl p-6 text-center">
-              <div className="font-[Montserrat] font-bold text-4xl text-[#f4a85e] mb-2">{m.value}</div>
+            <div key={m.value} className="bg-[#163d3a] rounded-2xl p-6 text-center">
+              <div className="font-[Montserrat] font-bold text-4xl text-[#f9ba48] mb-2">{m.value}</div>
               <div className="text-white/70 text-sm font-[Montserrat]">{m.label}</div>
             </div>
           ))}
@@ -91,12 +91,12 @@ export default function WhyIdealnovate() {
           {reasons.map((r, i) => (
             <div
               key={r.title}
-              className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-[#068276]/30 hover:shadow-xl hover:shadow-[#068276]/8 transition-all duration-300 hover:-translate-y-1"
+              className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-[#266D67]/30 hover:shadow-xl hover:shadow-[#266D67]/8 transition-all duration-300 hover:-translate-y-1"
             >
-              <div className="w-12 h-12 rounded-xl bg-[#f0faf8] flex items-center justify-center text-[#068276] mb-4 group-hover:bg-[#068276] group-hover:text-white transition-all duration-300">
+              <div className="w-12 h-12 rounded-xl bg-[#eef6f5] flex items-center justify-center text-[#266D67] mb-4 group-hover:bg-[#266D67] group-hover:text-white transition-all duration-300">
                 {r.icon}
               </div>
-              <h3 className="font-[Montserrat] font-bold text-[#022c28] text-base mb-2">{r.title}</h3>
+              <h3 className="font-[Montserrat] font-bold text-[#163d3a] text-base mb-2">{r.title}</h3>
               <p className="text-gray-500 text-sm leading-relaxed font-[Montserrat]">{r.description}</p>
             </div>
           ))}
@@ -107,7 +107,7 @@ export default function WhyIdealnovate() {
           <div className="grid lg:grid-cols-2 min-h-[360px] lg:min-h-[420px]">
 
             {/* LEFT — Brand gradient with CTA */}
-            <div className="relative bg-gradient-to-br from-[#022c28] via-[#033d38] to-[#068276] flex items-center px-8 sm:px-10 lg:px-14 py-12 lg:py-16">
+            <div className="relative bg-gradient-to-br from-[#163d3a] via-[#1d5450] to-[#266D67] flex items-center px-8 sm:px-10 lg:px-14 py-12 lg:py-16">
               {/* Subtle decorative dot grid */}
               <div
                 className="absolute inset-0 opacity-[0.06]"
@@ -120,12 +120,12 @@ export default function WhyIdealnovate() {
               {/* Soft radial glow */}
               <div
                 className="absolute bottom-0 left-0 w-72 h-72 opacity-20 blur-3xl"
-                style={{ background: "radial-gradient(circle, #f4a85e 0%, transparent 70%)" }}
+                style={{ background: "radial-gradient(circle, #f9ba48 0%, transparent 70%)" }}
               />
 
               <div className="relative z-10 max-w-md">
                 <span className="inline-flex items-center gap-2 px-3 py-1 bg-white/10 border border-white/20 rounded-full text-white/80 text-xs font-semibold font-[Montserrat] mb-5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#f4a85e] animate-pulse" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#f9ba48] animate-pulse" />
                   Transform Your Career
                 </span>
 
@@ -140,7 +140,7 @@ export default function WhyIdealnovate() {
                 <div className="flex flex-wrap gap-3">
                   <a
                     href="/company/scholarships"
-                    className="inline-flex items-center gap-2 px-6 py-3 bg-[#f4a85e] text-white font-bold rounded-lg hover:bg-[#e8903e] transition-all shadow-sm font-[Montserrat] text-sm group"
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-[#f9ba48] text-white font-bold rounded-lg hover:bg-[#d4a030] transition-all shadow-sm font-[Montserrat] text-sm group"
                   >
                     Apply for Scholarship
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -168,7 +168,7 @@ export default function WhyIdealnovate() {
                 className="absolute inset-0"
                 style={{
                   background:
-                    "linear-gradient(to right, #068276 0%, rgba(6,130,118,0.5) 25%, rgba(6,130,118,0.1) 55%, transparent 100%)",
+                    "linear-gradient(to right, #266D67 0%, rgba(6,130,118,0.5) 25%, rgba(6,130,118,0.1) 55%, transparent 100%)",
                 }}
               />
               {/* Subtle dark vignette on bottom for depth */}

@@ -10,7 +10,7 @@ const projects = [
     student: "Amara Osei",
     school: "Design School",
     category: "UI/UX Design",
-    color: "from-[#068276] to-[#022c28]",
+    color: "from-[#266D67] to-[#163d3a]",
     pattern: "circles",
     likes: 284,
   },
@@ -20,7 +20,7 @@ const projects = [
     student: "Chiamaka Eze",
     school: "Design School",
     category: "Branding",
-    color: "from-[#f4a85e] to-[#e8903e]",
+    color: "from-[#f9ba48] to-[#d4a030]",
     pattern: "squares",
     likes: 196,
   },
@@ -30,7 +30,7 @@ const projects = [
     student: "Kwame Mensah",
     school: "Data & AI School",
     category: "Data Viz",
-    color: "from-[#022c28] to-[#068276]",
+    color: "from-[#163d3a] to-[#266D67]",
     pattern: "dots",
     likes: 312,
   },
@@ -40,7 +40,7 @@ const projects = [
     student: "Fatimah Bello",
     school: "Design School",
     category: "Product Design",
-    color: "from-[#0a9e90] to-[#068276]",
+    color: "from-[#2d8a84] to-[#266D67]",
     pattern: "lines",
     likes: 241,
   },
@@ -50,7 +50,7 @@ const projects = [
     student: "David Adeyemi",
     school: "Marketing School",
     category: "Digital Strategy",
-    color: "from-[#f4a85e] to-[#022c28]",
+    color: "from-[#f9ba48] to-[#163d3a]",
     pattern: "waves",
     likes: 178,
   },
@@ -60,7 +60,7 @@ const projects = [
     student: "Zainab Yusuf",
     school: "Management School",
     category: "Product Management",
-    color: "from-[#068276] to-[#f4a85e]",
+    color: "from-[#266D67] to-[#f9ba48]",
     pattern: "grid",
     likes: 223,
   },
@@ -68,7 +68,7 @@ const projects = [
 
 function ProjectCard({ project }: { project: typeof projects[0] }) {
   return (
-    <div className="group relative bg-white rounded-2xl overflow-hidden border border-gray-100 hover:border-[#068276]/20 hover:shadow-2xl hover:shadow-[#068276]/10 transition-all duration-300 hover:-translate-y-1">
+    <div className="group relative bg-white rounded-2xl overflow-hidden border border-gray-100 hover:border-[#266D67]/20 hover:shadow-2xl hover:shadow-[#266D67]/10 transition-all duration-300 hover:-translate-y-1">
       {/* Visual area */}
       <div className={`relative h-48 bg-gradient-to-br ${project.color} overflow-hidden`}>
         {/* Abstract design pattern */}
@@ -138,13 +138,13 @@ function ProjectCard({ project }: { project: typeof projects[0] }) {
         </div>
 
         {/* Hover overlay */}
-        <div className="absolute inset-0 bg-[#022c28]/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+        <div className="absolute inset-0 bg-[#163d3a]/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
           <div className="flex gap-3">
-            <button className="w-10 h-10 rounded-full bg-white flex items-center justify-center hover:bg-[#f4a85e] transition-colors">
-              <ExternalLink className="w-4 h-4 text-[#022c28] hover:text-white" />
+            <button className="w-10 h-10 rounded-full bg-white flex items-center justify-center hover:bg-[#f9ba48] transition-colors">
+              <ExternalLink className="w-4 h-4 text-[#163d3a] hover:text-white" />
             </button>
             <button className="w-10 h-10 rounded-full bg-white flex items-center justify-center hover:bg-red-500 transition-colors">
-              <Heart className="w-4 h-4 text-[#022c28] hover:text-white" />
+              <Heart className="w-4 h-4 text-[#163d3a] hover:text-white" />
             </button>
           </div>
         </div>
@@ -152,12 +152,12 @@ function ProjectCard({ project }: { project: typeof projects[0] }) {
 
       {/* Card content */}
       <div className="p-4">
-        <h4 className="font-[Montserrat] font-bold text-[#022c28] text-sm mb-1 group-hover:text-[#068276] transition-colors">
+        <h4 className="font-[Montserrat] font-bold text-[#163d3a] text-sm mb-1 group-hover:text-[#266D67] transition-colors">
           {project.title}
         </h4>
         <div className="flex items-center justify-between">
           <div>
-            <p className="text-xs font-semibold text-[#068276] font-[Montserrat]">{project.student}</p>
+            <p className="text-xs font-semibold text-[#266D67] font-[Montserrat]">{project.student}</p>
             <p className="text-xs text-gray-400 font-[Montserrat]">{project.school}</p>
           </div>
           <div className="flex items-center gap-1 text-gray-400 text-xs font-[Montserrat]">
@@ -176,13 +176,13 @@ export default function StudentWorks() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-12 lg:mb-16">
-          <span className="inline-flex items-center gap-2 px-4 py-2 bg-[#f0faf8] text-[#068276] text-sm font-semibold rounded-full mb-4 font-[Montserrat]">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#068276]" />
+          <span className="inline-flex items-center gap-2 px-4 py-2 bg-[#eef6f5] text-[#266D67] text-sm font-semibold rounded-full mb-4 font-[Montserrat]">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#266D67]" />
             Student Showcase
           </span>
-          <h2 className="font-[Montserrat] font-bold text-3xl sm:text-4xl lg:text-5xl text-[#022c28] leading-tight">
+          <h2 className="font-[Montserrat] font-bold text-3xl sm:text-4xl lg:text-5xl text-[#163d3a] leading-tight">
             Brilliant Minds,
-            <span className="text-[#068276]"> Brilliant Work</span>
+            <span className="text-[#266D67]"> Brilliant Work</span>
           </h2>
           <p className="mt-4 text-gray-500 text-lg font-[Montserrat] font-light leading-relaxed">
             Our learners don&apos;t just earn certificates — they build real portfolios that get them hired. Explore some of the incredible projects from our community.
@@ -200,14 +200,14 @@ export default function StudentWorks() {
         <div className="flex flex-wrap justify-center gap-4">
           <Link
             href="/hire/individuals"
-            className="group inline-flex items-center gap-2 px-7 py-3.5 bg-[#068276] text-white font-bold rounded-lg hover:bg-[#022c28] transition-all shadow-sm font-[Montserrat] text-sm"
+            className="group inline-flex items-center gap-2 px-7 py-3.5 bg-[#266D67] text-white font-bold rounded-lg hover:bg-[#163d3a] transition-all shadow-sm font-[Montserrat] text-sm"
           >
             View All Projects
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </Link>
           <Link
             href="/hire/individuals"
-            className="inline-flex items-center gap-2 px-7 py-3.5 border border-[#068276] text-[#068276] font-bold rounded-lg hover:bg-[#068276] hover:text-white transition-all font-[Montserrat] text-sm"
+            className="inline-flex items-center gap-2 px-7 py-3.5 border border-[#266D67] text-[#266D67] font-bold rounded-lg hover:bg-[#266D67] hover:text-white transition-all font-[Montserrat] text-sm"
           >
             Hire Our Talents
           </Link>

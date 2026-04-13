@@ -45,12 +45,12 @@ const features = [
 
 export default function Community() {
   return (
-    <section className="section-padding bg-[#022c28] relative overflow-hidden">
+    <section className="section-padding bg-[#163d3a] relative overflow-hidden">
       {/* Background decor */}
       <div
         className="absolute inset-0 opacity-5"
         style={{
-          backgroundImage: "radial-gradient(circle at 30% 40%, #f4a85e 0%, transparent 50%), radial-gradient(circle at 70% 80%, #068276 0%, transparent 50%)",
+          backgroundImage: "radial-gradient(circle at 30% 40%, #f9ba48 0%, transparent 50%), radial-gradient(circle at 70% 80%, #266D67 0%, transparent 50%)",
         }}
       />
       <div
@@ -64,14 +64,14 @@ export default function Community() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-12 lg:mb-16">
-          <span className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 text-[#f4a85e] text-sm font-semibold rounded-full mb-4 border border-white/10 font-[Montserrat]">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#f4a85e]" />
+          <span className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 text-[#f9ba48] text-sm font-semibold rounded-full mb-4 border border-white/10 font-[Montserrat]">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#f9ba48]" />
             The Power of Community
           </span>
           <h2 className="font-[Montserrat] font-bold text-3xl sm:text-4xl lg:text-5xl text-white leading-tight">
             You Don&apos;t Learn Alone.
             <br />
-            <span className="text-[#f4a85e]">You Grow Together.</span>
+            <span className="text-[#f9ba48]">You Grow Together.</span>
           </h2>
           <p className="mt-5 text-white/65 text-lg font-[Montserrat] font-light leading-relaxed">
             Our community is one of our most powerful tools. When you join Idealnovate, you&apos;re plugging into a network of driven, talented professionals who will push you to be the best version of yourself.
@@ -82,7 +82,7 @@ export default function Community() {
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-14">
           {communityStats.map((s) => (
             <div key={s.label} className="text-center p-6 bg-white/5 rounded-2xl border border-white/10 hover:bg-white/8 transition-colors">
-              <div className="font-[Montserrat] font-bold text-3xl lg:text-4xl text-[#f4a85e] mb-1">{s.value}</div>
+              <div className="font-[Montserrat] font-bold text-3xl lg:text-4xl text-[#f9ba48] mb-1">{s.value}</div>
               <div className="text-white/55 text-sm font-[Montserrat]">{s.label}</div>
             </div>
           ))}
@@ -93,9 +93,9 @@ export default function Community() {
           {features.map((f) => (
             <div
               key={f.title}
-              className="group bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-[#f4a85e]/30 transition-all duration-300"
+              className="group bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-[#f9ba48]/30 transition-all duration-300"
             >
-              <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center text-[#f4a85e] mb-4 group-hover:bg-[#f4a85e] group-hover:text-white transition-all duration-300">
+              <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center text-[#f9ba48] mb-4 group-hover:bg-[#f9ba48] group-hover:text-white transition-all duration-300">
                 {f.icon}
               </div>
               <h3 className="font-[Montserrat] font-bold text-white text-base mb-2">{f.title}</h3>
@@ -108,7 +108,7 @@ export default function Community() {
         <div className="mt-14 text-center">
           <Link
             href="/company/community"
-            className="group inline-flex items-center gap-2 px-8 py-4 bg-[#f4a85e] text-white font-bold rounded-lg hover:bg-[#e8903e] transition-all shadow-sm font-[Montserrat] text-base"
+            className="group inline-flex items-center gap-2 px-8 py-4 bg-[#f9ba48] text-white font-bold rounded-lg hover:bg-[#d4a030] transition-all shadow-sm font-[Montserrat] text-base"
           >
             Join Our Community Free
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

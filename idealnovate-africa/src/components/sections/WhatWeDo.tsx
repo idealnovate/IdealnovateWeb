@@ -21,9 +21,9 @@ const services = [
     ],
     cta: "Explore Programmes",
     href: "/learn/design-school",
-    accent: "#068276",
-    light: "#f0faf8",
-    gradient: "from-[#068276] to-[#022c28]",
+    accent: "#266D67",
+    light: "#eef6f5",
+    gradient: "from-[#266D67] to-[#163d3a]",
   },
   {
     id: "02",
@@ -41,9 +41,9 @@ const services = [
     ],
     cta: "Build Your Team",
     href: "/hire/team",
-    accent: "#022c28",
+    accent: "#163d3a",
     light: "#e8f0ef",
-    gradient: "from-[#022c28] to-[#035249]",
+    gradient: "from-[#163d3a] to-[#1f5954]",
   },
   {
     id: "03",
@@ -61,9 +61,9 @@ const services = [
     ],
     cta: "Hire Our Talents",
     href: "/hire/individuals",
-    accent: "#f4a85e",
+    accent: "#f9ba48",
     light: "#fff8f0",
-    gradient: "from-[#f4a85e] to-[#e8903e]",
+    gradient: "from-[#f9ba48] to-[#d4a030]",
   },
 ];
 
@@ -73,14 +73,14 @@ export default function WhatWeDo() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center max-w-4xl mx-auto mb-16 lg:mb-20">
-          <span className="inline-flex items-center gap-2 px-4 py-2 bg-[#f0faf8] text-[#068276] text-sm font-semibold rounded-full mb-4 font-[Montserrat]">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#068276]" />
+          <span className="inline-flex items-center gap-2 px-4 py-2 bg-[#eef6f5] text-[#266D67] text-sm font-semibold rounded-full mb-4 font-[Montserrat]">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#266D67]" />
             What We Do
           </span>
-          <h2 className="font-[Montserrat] font-bold text-3xl sm:text-4xl lg:text-5xl text-[#022c28] leading-tight">
+          <h2 className="font-[Montserrat] font-bold text-3xl sm:text-4xl lg:text-5xl text-[#163d3a] leading-tight">
             One Platform to Upskill Talents,
             <br />
-            <span className="text-[#068276]">Build Teams and Get Hired</span>
+            <span className="text-[#266D67]">Build Teams and Get Hired</span>
           </h2>
           <p className="mt-5 text-gray-500 text-lg font-[Montserrat] font-light leading-relaxed max-w-2xl mx-auto">
             Idealnovate Africa bridges the gap between talent and opportunity — for learners, employers, and organisations across Africa and beyond.
@@ -92,7 +92,7 @@ export default function WhatWeDo() {
           {services.map((service, index) => (
             <div
               key={service.id}
-              className={`group rounded-3xl overflow-hidden border border-gray-100 hover:border-transparent hover:shadow-2xl hover:shadow-[#068276]/10 transition-all duration-300 ${
+              className={`group rounded-3xl overflow-hidden border border-gray-100 hover:border-transparent hover:shadow-2xl hover:shadow-[#266D67]/10 transition-all duration-300 ${
                 index % 2 === 0 ? "" : ""
               }`}
             >
@@ -114,7 +114,7 @@ export default function WhatWeDo() {
                     )}
                     <div>
                       <span className="text-sm font-semibold text-gray-400 font-[Montserrat]">{service.tagline}</span>
-                      <h3 className="font-[Montserrat] font-bold text-2xl lg:text-3xl text-[#022c28] mt-0.5">
+                      <h3 className="font-[Montserrat] font-bold text-2xl lg:text-3xl text-[#163d3a] mt-0.5">
                         {service.title}
                       </h3>
                     </div>

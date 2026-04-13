@@ -7,15 +7,15 @@
   --foreground: #1a1a1a;
 
   /* Idealnovate Brand Colors */
-  --brand-primary: #068276;
+  --brand-primary: #266D67;
   --brand-primary-dark: #056b62;
-  --brand-primary-light: #0a9e90;
-  --brand-dark: #022c28;
-  --brand-accent: #f4a85e;
-  --brand-accent-dark: #e8903e;
-  --brand-light-bg: #f0faf8;
-  --brand-section-bg: #f7fbfa;
-  --brand-muted: #e8f5f3;
+  --brand-primary-light: #2d8a84;
+  --brand-dark: #163d3a;
+  --brand-accent: #f9ba48;
+  --brand-accent-dark: #d4a030;
+  --brand-light-bg: #eef6f5;
+  --brand-section-bg: #f4f9f8;
+  --brand-muted: #e2efee;
 }
 
 @theme inline {
@@ -71,28 +71,28 @@ p {
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #f0faf8;
+  background: #eef6f5;
 }
 ::-webkit-scrollbar-thumb {
-  background: #068276;
+  background: #266D67;
   border-radius: 3px;
 }
 
 /* Gradient utilities */
 .gradient-primary {
-  background: linear-gradient(135deg, #068276 0%, #022c28 100%);
+  background: linear-gradient(135deg, #266D67 0%, #163d3a 100%);
 }
 
 .gradient-hero {
-  background: linear-gradient(135deg, #022c28 0%, #068276 50%, #0a9e90 100%);
+  background: linear-gradient(135deg, #163d3a 0%, #266D67 50%, #2d8a84 100%);
 }
 
 .gradient-accent {
-  background: linear-gradient(135deg, #f4a85e 0%, #e8903e 100%);
+  background: linear-gradient(135deg, #f9ba48 0%, #d4a030 100%);
 }
 
 .text-gradient {
-  background: linear-gradient(135deg, #068276, #f4a85e);
+  background: linear-gradient(135deg, #266D67, #f9ba48);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

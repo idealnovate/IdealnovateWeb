@@ -24,7 +24,7 @@ const schools = [
     href:  "/learn/design-school",
     icon:  <Palette   className="w-5 h-5" />,
     desc:  "Master UI/UX, graphics & brand design",
-    accent:      "#f4a85e",
+    accent:      "#f9ba48",
     accentLight: "rgba(244,168,94,0.15)",
     tag:   "Most Popular",
   },
@@ -42,7 +42,7 @@ const schools = [
     href:  "/learn/marketing-school",
     icon:  <Megaphone className="w-5 h-5" />,
     desc:  "Digital marketing & growth strategies",
-    accent:      "#f4a85e",
+    accent:      "#f9ba48",
     accentLight: "rgba(244,168,94,0.15)",
     tag:   "New Intake",
   },
@@ -74,16 +74,16 @@ export default function Hero() {
           <div className="w-full max-w-lg">
 
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#f0faf8] border border-[#e8f5f3] rounded-full text-xs sm:text-sm font-semibold text-[#068276] mb-6 font-[Montserrat]">
-              <span className="w-2 h-2 rounded-full bg-[#068276] animate-pulse shrink-0" />
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#eef6f5] border border-[#e2efee] rounded-full text-xs sm:text-sm font-semibold text-[#266D67] mb-6 font-[Montserrat]">
+              <span className="w-2 h-2 rounded-full bg-[#266D67] animate-pulse shrink-0" />
               Africa&apos;s #1 tech upskilling platform
             </div>
 
             {/* Headline */}
-            <h1 className="font-[Montserrat] font-bold text-[#022c28] text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl leading-[1.1] tracking-tight mb-5">
+            <h1 className="font-[Montserrat] font-bold text-[#163d3a] text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl leading-[1.1] tracking-tight mb-5">
               Learn the skill.
               <br />
-              <span className="text-[#068276]">Land the job.</span>
+              <span className="text-[#266D67]">Land the job.</span>
             </h1>
 
             {/* Sub-heading */}
@@ -95,16 +95,16 @@ export default function Hero() {
             <div className="flex flex-col sm:flex-row gap-3 mb-10">
               <Link
                 href="/company/scholarships"
-                className="group inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-[#022c28] text-white font-bold text-sm rounded-lg hover:bg-[#068276] transition-all duration-200 shadow-sm font-[Montserrat]"
+                className="group inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-[#163d3a] text-white font-bold text-sm rounded-lg hover:bg-[#266D67] transition-all duration-200 shadow-sm font-[Montserrat]"
               >
                 Get Scholarship Access
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform shrink-0" />
               </Link>
               <button
                 onClick={() => setVideoOpen(true)}
-                className="inline-flex items-center justify-center gap-3 px-6 py-3.5 border border-[#022c28]/20 text-[#022c28] font-semibold text-sm rounded-lg hover:border-[#022c28] hover:bg-[#f7fbfa] transition-all duration-200 font-[Montserrat]"
+                className="inline-flex items-center justify-center gap-3 px-6 py-3.5 border border-[#163d3a]/20 text-[#163d3a] font-semibold text-sm rounded-lg hover:border-[#163d3a] hover:bg-[#f4f9f8] transition-all duration-200 font-[Montserrat]"
               >
-                <span className="w-7 h-7 rounded-full bg-[#022c28] flex items-center justify-center shrink-0">
+                <span className="w-7 h-7 rounded-full bg-[#163d3a] flex items-center justify-center shrink-0">
                   <Play className="w-3 h-3 text-white ml-0.5" fill="currentColor" />
                 </span>
                 Watch Demo
@@ -118,7 +118,7 @@ export default function Hero() {
                   <div
                     key={i}
                     className="w-8 h-8 rounded-full border-2 border-white flex items-center justify-center text-[10px] font-bold text-white"
-                    style={{ background: i % 2 === 0 ? "#f4a85e" : "#068276" }}
+                    style={{ background: i % 2 === 0 ? "#f9ba48" : "#266D67" }}
                   >
                     {String.fromCharCode(64 + i)}
                   </div>
@@ -127,9 +127,9 @@ export default function Hero() {
               <div>
                 <div className="flex items-center gap-0.5">
                   {[1, 2, 3, 4, 5].map((i) => (
-                    <Star key={i} className="w-3.5 h-3.5 text-[#f4a85e]" fill="currentColor" />
+                    <Star key={i} className="w-3.5 h-3.5 text-[#f9ba48]" fill="currentColor" />
                   ))}
-                  <span className="text-[#022c28] font-bold text-xs ml-1 font-[Montserrat]">4.9</span>
+                  <span className="text-[#163d3a] font-bold text-xs ml-1 font-[Montserrat]">4.9</span>
                 </div>
                 <p className="text-gray-400 text-xs font-[Montserrat] mt-0.5">Trusted by 12,000+ learners across Africa</p>
               </div>
@@ -138,7 +138,7 @@ export default function Hero() {
         </div>
 
         {/* ── RIGHT: Brand dark panel ── */}
-        <div className="bg-[#022c28] flex items-center justify-start relative overflow-hidden pt-8 pb-12 lg:pt-36 lg:pb-16 px-6 sm:px-10 lg:px-10 xl:px-16">
+        <div className="bg-[#163d3a] flex items-center justify-start relative overflow-hidden pt-8 pb-12 lg:pt-36 lg:pb-16 px-6 sm:px-10 lg:px-10 xl:px-16">
 
           {/* Decorative background elements */}
           <div
@@ -151,11 +151,11 @@ export default function Hero() {
           />
           <div
             className="absolute top-0 right-0 w-96 h-96 rounded-full opacity-10 blur-3xl"
-            style={{ background: "radial-gradient(circle, #068276 0%, transparent 70%)" }}
+            style={{ background: "radial-gradient(circle, #266D67 0%, transparent 70%)" }}
           />
           <div
             className="absolute bottom-0 left-0 w-72 h-72 rounded-full opacity-10 blur-3xl"
-            style={{ background: "radial-gradient(circle, #f4a85e 0%, transparent 70%)" }}
+            style={{ background: "radial-gradient(circle, #f9ba48 0%, transparent 70%)" }}
           />
 
           {/* Cards content */}
@@ -236,7 +236,7 @@ export default function Hero() {
               </div>
               <Link
                 href="/company/scholarships"
-                className="shrink-0 inline-flex items-center gap-1.5 px-4 py-2 bg-[#068276] text-white font-bold text-xs rounded-lg hover:bg-[#f4a85e] transition-all duration-200 font-[Montserrat] w-full sm:w-auto justify-center"
+                className="shrink-0 inline-flex items-center gap-1.5 px-4 py-2 bg-[#266D67] text-white font-bold text-xs rounded-lg hover:bg-[#f9ba48] transition-all duration-200 font-[Montserrat] w-full sm:w-auto justify-center"
               >
                 Start Quiz <ArrowRight className="w-3.5 h-3.5" />
               </Link>
@@ -252,11 +252,11 @@ export default function Hero() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6">
           {stats.map((stat) => (
             <div key={stat.label} className="flex items-center gap-3">
-              <div className="w-9 h-9 rounded-lg bg-[#f0faf8] flex items-center justify-center text-[#068276] shrink-0">
+              <div className="w-9 h-9 rounded-lg bg-[#eef6f5] flex items-center justify-center text-[#266D67] shrink-0">
                 {stat.icon}
               </div>
               <div>
-                <p className="font-[Montserrat] font-bold text-[#022c28] text-lg sm:text-xl leading-tight">{stat.value}</p>
+                <p className="font-[Montserrat] font-bold text-[#163d3a] text-lg sm:text-xl leading-tight">{stat.value}</p>
                 <p className="font-[Montserrat] text-gray-400 text-xs">{stat.label}</p>
               </div>
             </div>
@@ -267,7 +267,7 @@ export default function Hero() {
       {/* ══════════════════════════════════════════
           PARTNERS MARQUEE  —  Full width, off-white
       ══════════════════════════════════════════ */}
-      <div className="bg-[#f7fbfa] border-t border-gray-100 py-5 sm:py-6">
+      <div className="bg-[#f4f9f8] border-t border-gray-100 py-5 sm:py-6">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-center text-gray-400 text-[10px] sm:text-xs font-[Montserrat] uppercase tracking-widest mb-4">
             Trusted by professionals at
@@ -277,7 +277,7 @@ export default function Hero() {
               {[...partners, ...partners].map((partner, i) => (
                 <span
                   key={i}
-                  className="inline-flex items-center font-[Montserrat] font-bold text-gray-300 text-xs sm:text-sm tracking-wider hover:text-[#068276] transition-colors shrink-0"
+                  className="inline-flex items-center font-[Montserrat] font-bold text-gray-300 text-xs sm:text-sm tracking-wider hover:text-[#266D67] transition-colors shrink-0"
                 >
                   {partner}
                 </span>
@@ -298,14 +298,14 @@ export default function Hero() {
             onClick={(e) => e.stopPropagation()}
           >
             <button
-              className="absolute top-3 right-3 z-10 w-8 h-8 bg-black/10 rounded-full flex items-center justify-center text-[#022c28] hover:bg-black/20 transition-colors text-lg font-bold"
+              className="absolute top-3 right-3 z-10 w-8 h-8 bg-black/10 rounded-full flex items-center justify-center text-[#163d3a] hover:bg-black/20 transition-colors text-lg font-bold"
               onClick={() => setVideoOpen(false)}
             >
               ×
             </button>
-            <div className="aspect-video bg-[#022c28] flex items-center justify-center">
+            <div className="aspect-video bg-[#163d3a] flex items-center justify-center">
               <div className="text-center text-white px-4">
-                <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-[#068276] flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-[#266D67] flex items-center justify-center mx-auto mb-4">
                   <Play className="w-6 h-6 sm:w-8 sm:h-8 text-white ml-1" fill="currentColor" />
                 </div>
                 <p className="font-[Montserrat] font-bold text-base sm:text-lg">Demo Video Coming Soon</p>

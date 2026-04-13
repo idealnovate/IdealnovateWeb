@@ -16,13 +16,13 @@ export default function VisitMarket() {
   return (
     <section className="section-padding bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="relative overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-[#022c28] via-[#035249] to-[#068276]">
+        <div className="relative overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-[#163d3a] via-[#1f5954] to-[#266D67]">
           {/* Decorative layer */}
           <div
             className="absolute inset-0 opacity-10"
             style={{
               backgroundImage:
-                "radial-gradient(circle at 80% 20%, #f4a85e 0%, transparent 50%), radial-gradient(circle at 20% 80%, #0a9e90 0%, transparent 50%)",
+                "radial-gradient(circle at 80% 20%, #f9ba48 0%, transparent 50%), radial-gradient(circle at 20% 80%, #2d8a84 0%, transparent 50%)",
             }}
           />
           <div
@@ -38,14 +38,14 @@ export default function VisitMarket() {
             <div className="grid lg:grid-cols-2 gap-10 items-center">
               {/* Left */}
               <div>
-                <span className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 text-[#f4a85e] text-sm font-semibold rounded-full mb-5 border border-white/15 font-[Montserrat]">
+                <span className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 text-[#f9ba48] text-sm font-semibold rounded-full mb-5 border border-white/15 font-[Montserrat]">
                   <ShoppingBag className="w-3.5 h-3.5" />
                   Idealnovate Marketplace
                 </span>
                 <h2 className="font-[Montserrat] font-bold text-3xl sm:text-4xl lg:text-5xl text-white leading-tight mb-5">
                   Get the Tech Gear
                   <br />
-                  <span className="text-[#f4a85e]">Powering Your Journey</span>
+                  <span className="text-[#f9ba48]">Powering Your Journey</span>
                 </h2>
                 <p className="text-white/70 font-[Montserrat] font-light text-lg leading-relaxed mb-6">
                   Visit the Idealnovate Marketplace to explore a curated selection of premium tech gadgets, learning tools, and equipment — specially sourced for African tech learners and professionals.
@@ -58,7 +58,7 @@ export default function VisitMarket() {
                       key={g.name}
                       className="flex items-center gap-2 px-3 py-2.5 bg-white/8 backdrop-blur-sm border border-white/10 rounded-xl text-white/80 text-sm font-[Montserrat] hover:bg-white/15 transition-colors"
                     >
-                      <span className="text-[#f4a85e]">{g.icon}</span>
+                      <span className="text-[#f9ba48]">{g.icon}</span>
                       {g.name}
                     </div>
                   ))}
@@ -66,7 +66,7 @@ export default function VisitMarket() {
 
                 <Link
                   href="/marketplace"
-                  className="group inline-flex items-center gap-3 px-7 py-4 bg-[#f4a85e] text-white font-bold rounded-lg hover:bg-[#e8903e] transition-all shadow-sm font-[Montserrat] text-base"
+                  className="group inline-flex items-center gap-3 px-7 py-4 bg-[#f9ba48] text-white font-bold rounded-lg hover:bg-[#d4a030] transition-all shadow-sm font-[Montserrat] text-base"
                 >
                   <ShoppingBag className="w-5 h-5" />
                   Visit Marketplace
@@ -86,7 +86,7 @@ export default function VisitMarket() {
                     <div>
                       <div className="flex items-center justify-between mb-4">
                         <span className="text-white/60 text-xs font-[Montserrat] uppercase tracking-wider">Featured</span>
-                        <span className="px-2.5 py-1 bg-[#f4a85e] text-white text-xs font-bold rounded-full font-[Montserrat]">
+                        <span className="px-2.5 py-1 bg-[#f9ba48] text-white text-xs font-bold rounded-full font-[Montserrat]">
                           Sale
                         </span>
                       </div>
@@ -97,8 +97,8 @@ export default function VisitMarket() {
                       <p className="text-white/60 text-sm font-[Montserrat]">Perfect for learners</p>
                     </div>
                     <div className="flex items-center justify-between">
-                      <span className="text-[#f4a85e] font-[Montserrat] font-bold text-xl">₦420,000</span>
-                      <button className="px-3 py-1.5 bg-[#f4a85e] text-white text-xs font-bold rounded-lg font-[Montserrat]">
+                      <span className="text-[#f9ba48] font-[Montserrat] font-bold text-xl">₦420,000</span>
+                      <button className="px-3 py-1.5 bg-[#f9ba48] text-white text-xs font-bold rounded-lg font-[Montserrat]">
                         Shop Now
                       </button>
                     </div>

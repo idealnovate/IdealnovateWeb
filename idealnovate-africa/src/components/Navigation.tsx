@@ -73,14 +73,14 @@ export default function Navigation() {
       ref={navRef}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-white/98 backdrop-blur-md shadow-lg shadow-[#068276]/10"
+          ? "bg-white/98 backdrop-blur-md shadow-lg shadow-[#266D67]/10"
           : "bg-white/95 backdrop-blur-sm"
       }`}
     >
       {/* Top announcement bar */}
-      <div className="bg-[#022c28] text-white text-center py-2 text-xs font-medium tracking-wide">
+      <div className="bg-[#163d3a] text-white text-center py-2 text-xs font-medium tracking-wide">
         <span>🎓 Scholarship applications now open — </span>
-        <Link href="/company/scholarships" className="underline hover:text-[#f4a85e] transition-colors font-semibold">
+        <Link href="/company/scholarships" className="underline hover:text-[#f9ba48] transition-colors font-semibold">
           Apply Today →
         </Link>
       </div>
@@ -108,8 +108,8 @@ export default function Navigation() {
                   <button
                     className={`flex items-center gap-1 px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 font-[Montserrat] ${
                       activeMenu === item.label
-                        ? "text-[#068276] bg-[#f0faf8]"
-                        : "text-[#022c28] hover:text-[#068276] hover:bg-[#f0faf8]"
+                        ? "text-[#266D67] bg-[#eef6f5]"
+                        : "text-[#163d3a] hover:text-[#266D67] hover:bg-[#eef6f5]"
                     }`}
                     onMouseEnter={() => setActiveMenu(item.label)}
                     onMouseLeave={() => setActiveMenu(null)}
@@ -118,14 +118,14 @@ export default function Navigation() {
                     {item.label}
                     <ChevronDown
                       className={`w-3.5 h-3.5 transition-transform duration-200 ${
-                        activeMenu === item.label ? "rotate-180 text-[#068276]" : ""
+                        activeMenu === item.label ? "rotate-180 text-[#266D67]" : ""
                       }`}
                     />
                   </button>
                 ) : (
                   <Link
                     href={item.href}
-                    className="flex items-center gap-1 px-4 py-2 rounded-lg text-sm font-semibold text-[#022c28] hover:text-[#068276] hover:bg-[#f0faf8] transition-all duration-200 font-[Montserrat]"
+                    className="flex items-center gap-1 px-4 py-2 rounded-lg text-sm font-semibold text-[#163d3a] hover:text-[#266D67] hover:bg-[#eef6f5] transition-all duration-200 font-[Montserrat]"
                   >
                     {item.label}
                   </Link>
@@ -134,7 +134,7 @@ export default function Navigation() {
                 {/* Dropdown */}
                 {item.children.length > 0 && (
                   <div
-                    className={`absolute top-full left-0 mt-1 bg-white rounded-2xl shadow-2xl shadow-[#068276]/15 border border-[#e8f5f3] overflow-hidden transition-all duration-200 ${
+                    className={`absolute top-full left-0 mt-1 bg-white rounded-2xl shadow-2xl shadow-[#266D67]/15 border border-[#e2efee] overflow-hidden transition-all duration-200 ${
                       activeMenu === item.label
                         ? "opacity-100 translate-y-0 pointer-events-auto"
                         : "opacity-0 -translate-y-2 pointer-events-none"
@@ -148,14 +148,14 @@ export default function Navigation() {
                         <Link
                           key={child.label}
                           href={child.href}
-                          className="flex items-start gap-3 px-4 py-3 rounded-xl hover:bg-[#f0faf8] group/item transition-all duration-150"
+                          className="flex items-start gap-3 px-4 py-3 rounded-xl hover:bg-[#eef6f5] group/item transition-all duration-150"
                           onClick={() => setActiveMenu(null)}
                         >
-                          <span className="mt-0.5 w-8 h-8 rounded-lg bg-[#f0faf8] flex items-center justify-center text-[#068276] group-hover/item:bg-[#068276] group-hover/item:text-white transition-all duration-150 shrink-0">
+                          <span className="mt-0.5 w-8 h-8 rounded-lg bg-[#eef6f5] flex items-center justify-center text-[#266D67] group-hover/item:bg-[#266D67] group-hover/item:text-white transition-all duration-150 shrink-0">
                             {child.icon}
                           </span>
                           <div>
-                            <div className="text-sm font-semibold text-[#022c28] group-hover/item:text-[#068276] transition-colors font-[Montserrat]">
+                            <div className="text-sm font-semibold text-[#163d3a] group-hover/item:text-[#266D67] transition-colors font-[Montserrat]">
                               {child.label}
                             </div>
                             <div className="text-xs text-gray-500 mt-0.5 font-[Montserrat]">{child.desc}</div>
@@ -164,7 +164,7 @@ export default function Navigation() {
                       ))}
                     </div>
                     <div className="px-4 pb-3">
-                      <div className="h-px bg-[#e8f5f3]" />
+                      <div className="h-px bg-[#e2efee]" />
                     </div>
                   </div>
                 )}
@@ -176,13 +176,13 @@ export default function Navigation() {
           <div className="hidden lg:flex items-center gap-3">
             <Link
               href="/signin"
-              className="px-5 py-2 text-sm font-semibold text-[#068276] border border-[#068276] rounded-lg hover:bg-[#068276] hover:text-white transition-all duration-200 font-[Montserrat]"
+              className="px-5 py-2 text-sm font-semibold text-[#266D67] border border-[#266D67] rounded-lg hover:bg-[#266D67] hover:text-white transition-all duration-200 font-[Montserrat]"
             >
               Sign In
             </Link>
             <Link
               href="/company/scholarships"
-              className="px-5 py-2 text-sm font-semibold text-white bg-[#068276] rounded-lg hover:bg-[#022c28] transition-all duration-200 shadow-sm font-[Montserrat]"
+              className="px-5 py-2 text-sm font-semibold text-white bg-[#266D67] rounded-lg hover:bg-[#163d3a] transition-all duration-200 shadow-sm font-[Montserrat]"
             >
               Get Scholarship Access
             </Link>
@@ -190,7 +190,7 @@ export default function Navigation() {
 
           {/* Mobile Toggle */}
           <button
-            className="lg:hidden p-2 rounded-lg text-[#022c28] hover:bg-[#f0faf8] transition-colors"
+            className="lg:hidden p-2 rounded-lg text-[#163d3a] hover:bg-[#eef6f5] transition-colors"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Toggle menu"
           >
@@ -205,18 +205,18 @@ export default function Navigation() {
           mobileOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <div className="bg-white border-t border-[#e8f5f3] px-4 py-4 space-y-1 max-h-[80vh] overflow-y-auto">
+        <div className="bg-white border-t border-[#e2efee] px-4 py-4 space-y-1 max-h-[80vh] overflow-y-auto">
           {navItems.map((item) => (
             <div key={item.label}>
               {item.children.length > 0 ? (
                 <>
                   <button
-                    className="w-full flex items-center justify-between px-4 py-3 rounded-xl text-sm font-semibold text-[#022c28] hover:bg-[#f0faf8] transition-colors font-[Montserrat]"
+                    className="w-full flex items-center justify-between px-4 py-3 rounded-xl text-sm font-semibold text-[#163d3a] hover:bg-[#eef6f5] transition-colors font-[Montserrat]"
                     onClick={() => setMobileExpanded(mobileExpanded === item.label ? null : item.label)}
                   >
                     {item.label}
                     <ChevronDown
-                      className={`w-4 h-4 text-[#068276] transition-transform ${
+                      className={`w-4 h-4 text-[#266D67] transition-transform ${
                         mobileExpanded === item.label ? "rotate-180" : ""
                       }`}
                     />
@@ -231,10 +231,10 @@ export default function Navigation() {
                         <Link
                           key={child.label}
                           href={child.href}
-                          className="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-[#f0faf8] text-sm text-gray-600 hover:text-[#068276] transition-colors font-[Montserrat]"
+                          className="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-[#eef6f5] text-sm text-gray-600 hover:text-[#266D67] transition-colors font-[Montserrat]"
                           onClick={() => setMobileOpen(false)}
                         >
-                          <span className="text-[#068276]">{child.icon}</span>
+                          <span className="text-[#266D67]">{child.icon}</span>
                           {child.label}
                         </Link>
                       ))}
@@ -244,7 +244,7 @@ export default function Navigation() {
               ) : (
                 <Link
                   href={item.href}
-                  className="block px-4 py-3 rounded-xl text-sm font-semibold text-[#022c28] hover:bg-[#f0faf8] hover:text-[#068276] transition-colors font-[Montserrat]"
+                  className="block px-4 py-3 rounded-xl text-sm font-semibold text-[#163d3a] hover:bg-[#eef6f5] hover:text-[#266D67] transition-colors font-[Montserrat]"
                   onClick={() => setMobileOpen(false)}
                 >
                   {item.label}
@@ -253,17 +253,17 @@ export default function Navigation() {
             </div>
           ))}
 
-          <div className="pt-3 pb-1 flex flex-col gap-3 border-t border-[#e8f5f3] mt-2">
+          <div className="pt-3 pb-1 flex flex-col gap-3 border-t border-[#e2efee] mt-2">
             <Link
               href="/signin"
-              className="text-center px-5 py-3 text-sm font-semibold text-[#068276] border border-[#068276] rounded-lg hover:bg-[#068276] hover:text-white transition-all font-[Montserrat]"
+              className="text-center px-5 py-3 text-sm font-semibold text-[#266D67] border border-[#266D67] rounded-lg hover:bg-[#266D67] hover:text-white transition-all font-[Montserrat]"
               onClick={() => setMobileOpen(false)}
             >
               Sign In
             </Link>
             <Link
               href="/company/scholarships"
-              className="text-center px-5 py-3 text-sm font-semibold text-white bg-[#068276] rounded-lg hover:bg-[#022c28] transition-all shadow-sm font-[Montserrat]"
+              className="text-center px-5 py-3 text-sm font-semibold text-white bg-[#266D67] rounded-lg hover:bg-[#163d3a] transition-all shadow-sm font-[Montserrat]"
               onClick={() => setMobileOpen(false)}
             >
               Get Scholarship Access

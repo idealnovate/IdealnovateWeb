@@ -76,7 +76,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-[#022c28] text-white">
+    <footer className="bg-[#163d3a] text-white">
       {/* Newsletter bar */}
       <div className="border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
@@ -91,7 +91,7 @@ export default function Footer() {
             </div>
             <form onSubmit={handleSubscribe} className="flex gap-2 w-full lg:w-auto">
               {subscribed ? (
-                <div className="px-5 py-3 bg-[#068276] text-white rounded-lg text-sm font-semibold font-[Montserrat]">
+                <div className="px-5 py-3 bg-[#266D67] text-white rounded-lg text-sm font-semibold font-[Montserrat]">
                   ✓ You&apos;re subscribed!
                 </div>
               ) : (
@@ -106,7 +106,7 @@ export default function Footer() {
                   />
                   <button
                     type="submit"
-                    className="px-5 py-3 bg-[#068276] text-white rounded-lg hover:bg-[#0a9e90] transition-colors flex items-center gap-2 font-semibold text-sm font-[Montserrat] shrink-0"
+                    className="px-5 py-3 bg-[#266D67] text-white rounded-lg hover:bg-[#2d8a84] transition-colors flex items-center gap-2 font-semibold text-sm font-[Montserrat] shrink-0"
                   >
                     <Send className="w-4 h-4" />
                     Subscribe
@@ -146,7 +146,7 @@ export default function Footer() {
                   key={s.label}
                   href={s.href}
                   aria-label={s.label}
-                  className="w-9 h-9 rounded-xl bg-white/8 flex items-center justify-center text-white/60 hover:bg-[#068276] hover:text-white transition-all"
+                  className="w-9 h-9 rounded-xl bg-white/8 flex items-center justify-center text-white/60 hover:bg-[#266D67] hover:text-white transition-all"
                 >
                   {s.icon}
                 </Link>
@@ -156,15 +156,15 @@ export default function Footer() {
             {/* Contact */}
             <div className="space-y-2.5">
               <a href="mailto:hello@idealnovate.com" className="flex items-center gap-2.5 text-white/55 hover:text-white transition-colors text-sm font-[Montserrat]">
-                <Mail className="w-4 h-4 text-[#068276]" />
+                <Mail className="w-4 h-4 text-[#266D67]" />
                 hello@idealnovate.com
               </a>
               <a href="tel:+234XXXXXXXXXX" className="flex items-center gap-2.5 text-white/55 hover:text-white transition-colors text-sm font-[Montserrat]">
-                <Phone className="w-4 h-4 text-[#068276]" />
+                <Phone className="w-4 h-4 text-[#266D67]" />
                 +234 XXX XXX XXXX
               </a>
               <div className="flex items-start gap-2.5 text-white/55 text-sm font-[Montserrat]">
-                <MapPin className="w-4 h-4 text-[#068276] mt-0.5 shrink-0" />
+                <MapPin className="w-4 h-4 text-[#266D67] mt-0.5 shrink-0" />
                 <span>Lagos, Nigeria | Accra, Ghana | Pan-African</span>
               </div>
             </div>
@@ -181,7 +181,7 @@ export default function Footer() {
                       href={link.href}
                       className="text-white/50 hover:text-white transition-colors text-sm font-[Montserrat] flex items-center gap-1 group"
                     >
-                      <span className="w-1 h-1 rounded-full bg-[#068276] opacity-0 group-hover:opacity-100 transition-opacity" />
+                      <span className="w-1 h-1 rounded-full bg-[#266D67] opacity-0 group-hover:opacity-100 transition-opacity" />
                       {link.label}
                     </Link>
                   </li>
