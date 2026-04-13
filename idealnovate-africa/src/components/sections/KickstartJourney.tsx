@@ -1,0 +1,154 @@
+"use client";
+
+import Link from "next/link";
+import { ArrowRight, Award, Users, BookOpen, CheckCircle } from "lucide-react";
+
+const scholarshipTypes = [
+  {
+    icon: <Award className="w-6 h-6" />,
+    title: "Full Scholarship",
+    desc: "100% funded access to any Diploma programme. For exceptional applicants with financial need.",
+    badge: "Limited Slots",
+    badgeColor: "#f4a85e",
+    color: "#068276",
+  },
+  {
+    icon: <Users className="w-6 h-6" />,
+    title: "Corporate Scholarship",
+    desc: "Partnered companies sponsor their employees or communities for professional upskilling.",
+    badge: "Open Now",
+    badgeColor: "#068276",
+    color: "#022c28",
+  },
+  {
+    icon: <BookOpen className="w-6 h-6" />,
+    title: "Partial Scholarship",
+    desc: "Up to 70% subsidy on any programme. Available to learners who demonstrate potential.",
+    badge: "Rolling Basis",
+    badgeColor: "#0a9e90",
+    color: "#0a9e90",
+  },
+];
+
+const steps = [
+  { num: "1", text: "Submit your scholarship application online" },
+  { num: "2", text: "Complete a short skill & motivation assessment" },
+  { num: "3", text: "Get notified within 5 business days" },
+  { num: "4", text: "Begin your programme & change your career" },
+];
+
+export default function KickstartJourney() {
+  return (
+    <section className="section-padding bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
+        <div className="text-center max-w-3xl mx-auto mb-12 lg:mb-16">
+          <span className="inline-flex items-center gap-2 px-4 py-2 bg-[#f0faf8] text-[#068276] text-sm font-semibold rounded-full mb-4 font-[Montserrat]">
+            <Award className="w-3.5 h-3.5" />
+            Scholarship Access Programme
+          </span>
+          <h2 className="font-[Montserrat] font-bold text-3xl sm:text-4xl lg:text-5xl text-[#022c28] leading-tight">
+            Your Dream Career
+            <span className="text-[#068276]"> Shouldn&apos;t Cost You</span>
+            <br />
+            a Fortune
+          </h2>
+          <p className="mt-5 text-gray-500 text-lg font-[Montserrat] font-light leading-relaxed">
+            Financial constraints should never stand between you and a world-class tech education. Apply for our scholarship programme and kick-start your tech journey today.
+          </p>
+        </div>
+
+        {/* Scholarship types */}
+        <div className="grid sm:grid-cols-3 gap-6 mb-14">
+          {scholarshipTypes.map((s) => (
+            <div
+              key={s.title}
+              className="group relative bg-white rounded-2xl p-6 border border-gray-100 hover:border-[#068276]/30 hover:shadow-xl hover:shadow-[#068276]/8 transition-all duration-300 hover:-translate-y-1"
+            >
+              <div className="flex items-start justify-between mb-4">
+                <div
+                  className="w-12 h-12 rounded-xl flex items-center justify-center text-white"
+                  style={{ background: s.color }}
+                >
+                  {s.icon}
+                </div>
+                <span
+                  className="px-2.5 py-1 text-xs font-bold rounded-full font-[Montserrat]"
+                  style={{
+                    background: `${s.badgeColor}20`,
+                    color: s.badgeColor,
+                  }}
+                >
+                  {s.badge}
+                </span>
+              </div>
+              <h3 className="font-[Montserrat] font-bold text-[#022c28] text-lg mb-2">{s.title}</h3>
+              <p className="text-gray-500 text-sm font-[Montserrat] font-light leading-relaxed">{s.desc}</p>
+            </div>
+          ))}
+        </div>
+
+        {/* How it works */}
+        <div className="bg-[#f7fbfa] rounded-3xl p-8 lg:p-12">
+          <div className="grid lg:grid-cols-2 gap-10 items-center">
+            <div>
+              <h3 className="font-[Montserrat] font-bold text-2xl lg:text-3xl text-[#022c28] mb-5">
+                How to Apply in
+                <span className="text-[#068276]"> 4 Simple Steps</span>
+              </h3>
+              <div className="space-y-4">
+                {steps.map((step) => (
+                  <div key={step.num} className="flex items-center gap-4">
+                    <div className="w-9 h-9 rounded-full bg-[#068276] text-white font-bold font-[Montserrat] flex items-center justify-center text-sm shrink-0">
+                      {step.num}
+                    </div>
+                    <p className="text-[#022c28] font-[Montserrat] font-medium">{step.text}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="bg-[#022c28] rounded-2xl p-8 text-white">
+              <h4 className="font-[Montserrat] font-bold text-xl mb-4">Scholarship Eligibility</h4>
+              <ul className="space-y-3 mb-6">
+                {[
+                  "Open to all Africans aged 18+",
+                  "No prior tech experience needed",
+                  "Demonstration of motivation & drive",
+                  "Commitment to complete the programme",
+                  "Available for individuals & corporate teams",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-2.5 text-sm text-white/80 font-[Montserrat]">
+                    <CheckCircle className="w-4 h-4 text-[#f4a85e] shrink-0 mt-0.5" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <Link
+                href="/company/scholarships"
+                className="group flex items-center justify-center gap-2 py-3.5 px-6 bg-[#f4a85e] text-white font-bold rounded-lg hover:bg-[#e8903e] transition-all shadow-sm font-[Montserrat] text-sm"
+              >
+                Apply for Scholarship
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        {/* Teams section */}
+        <div className="mt-8 bg-[#f0faf8] rounded-2xl p-6 lg:p-8 flex flex-col lg:flex-row items-center justify-between gap-6">
+          <div className="text-center lg:text-left">
+            <p className="font-[Montserrat] font-bold text-[#022c28] text-lg">Building a team?</p>
+            <p className="text-gray-500 font-[Montserrat] text-sm mt-1">Get custom corporate training packages for your company or organisation.</p>
+          </div>
+          <Link
+            href="/hire/team"
+            className="shrink-0 inline-flex items-center gap-2 px-6 py-3 bg-[#022c28] text-white font-bold rounded-lg hover:bg-[#068276] transition-all shadow-sm font-[Montserrat] text-sm"
+          >
+            Explore Corporate Plans <ArrowRight className="w-4 h-4" />
+          </Link>
+        </div>
+      </div>
+    </section>
+  );
+}

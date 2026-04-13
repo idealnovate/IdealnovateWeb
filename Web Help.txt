@@ -1,0 +1,16 @@
+1. File Path:
+"C:\Users\user\Desktop\IdealnovateWeb"
+
+2. Webiste Claude Code Prompt:
+Build a high-end, fully responsive webiste for "Idealnovate Africa" using Next.js Tailwind Css, and shadcn/ui.
+Use https://www.genezaschoolofdesign.com as design inspiration, emulating its modern aesthetic, elegant san-serif headings like Montserrat with clean sans-seriff body text like Jost, and open layout with generous whitespace.
+Colour palette and content should be taken from https://idealnovate.com as the primary brand colour including for links and hover states, find and use the best branding colour for light sections backgrounds and base page background that matches and fits with the idealnovate primary brand colour.
+The navigation bar should carry the folowing menus and sub-menus:
+1. The logo of idealovate Africa pulled from https://idealnovate.com
+2. The navigation menus should contain: 
+- Learn (with "Design School", 'Data and AI School", "Marketing School", and "Management School" as the sub-menu pages under "Learn" parent menu)
+- Hire (with "Hire Individuals", "Hire Team", as the sub-menu pages under the "Hire" parent menu)
+
+Include these sessions in order:
+1. Navigation 
+
