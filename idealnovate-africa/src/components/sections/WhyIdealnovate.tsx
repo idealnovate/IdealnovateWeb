@@ -163,14 +163,6 @@ export default function WhyIdealnovate() {
                 fill
                 className="object-cover object-center"
               />
-              {/* Gradient blend — fades left edge into the brand colour */}
-              <div
-                className="absolute inset-0"
-                style={{
-                  background:
-                    "linear-gradient(to right, #266D67 0%, rgba(6,130,118,0.5) 25%, rgba(6,130,118,0.1) 55%, transparent 100%)",
-                }}
-              />
               {/* Subtle dark vignette on bottom for depth */}
               <div
                 className="absolute inset-0"

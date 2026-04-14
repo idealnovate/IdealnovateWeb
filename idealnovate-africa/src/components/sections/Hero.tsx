@@ -97,7 +97,7 @@ export default function Hero() {
                 href="/company/scholarships"
                 className="group inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-[#163d3a] text-white font-bold text-sm rounded-lg hover:bg-[#266D67] transition-all duration-200 shadow-sm font-[Montserrat]"
               >
-                Get Scholarship Access
+                Explore All Programmes
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform shrink-0" />
               </Link>
               <button
