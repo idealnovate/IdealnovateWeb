@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Target, Briefcase, Users, Globe, BarChart, Shield, Cpu, HeartHandshake, ArrowRight } from "lucide-react";
+import { Target, Briefcase, Users, Globe, BarChart, Shield, Cpu, HeartHandshake, ArrowRight, TrendingUp, Award, Star } from "lucide-react";
 
 const reasons = [
   {
@@ -46,11 +46,6 @@ const reasons = [
   },
 ];
 
-const metrics = [
-  { value: "94%", label: "Job placement rate within 6 months of completion" },
-  { value: "4.9★", label: "Average learner satisfaction rating" },
-  { value: "3x", label: "Average salary increase post-certification" },
-];
 
 export default function WhyIdealnovate() {
   return (
@@ -76,14 +71,28 @@ export default function WhyIdealnovate() {
           </div>
         </div>
 
-        {/* Metrics highlight strip */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-16">
-          {metrics.map((m) => (
-            <div key={m.value} className="bg-[#163d3a] rounded-2xl p-6 text-center">
-              <div className="font-[Montserrat] font-bold text-4xl text-[#f9ba48] mb-2">{m.value}</div>
-              <div className="text-white/70 text-sm font-[Montserrat]">{m.label}</div>
-            </div>
-          ))}
+        {/* Metrics strip */}
+        <div className="relative bg-[#163d3a] rounded-3xl overflow-hidden mb-16">
+          <div className="absolute inset-0 opacity-10"
+            style={{ backgroundImage: "radial-gradient(circle at 50% 50%, #f9ba48 0%, transparent 65%)" }} />
+          <div className="relative z-10 grid sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-white/10">
+            {[
+              { value: "94%",  label: "Job placement rate",         sub: "Within 6 months of completion",   icon: <Award className="w-5 h-5" /> },
+              { value: "4.9★", label: "Learner satisfaction rating", sub: "Across all programmes",            icon: <Star  className="w-5 h-5" /> },
+              { value: "3×",   label: "Average salary increase",     sub: "Post-certification growth",        icon: <TrendingUp className="w-5 h-5" /> },
+            ].map((m) => (
+              <div key={m.label} className="flex items-center gap-5 px-8 py-8">
+                <div className="w-12 h-12 rounded-xl bg-[#f9ba48]/15 flex items-center justify-center text-[#f9ba48] shrink-0">
+                  {m.icon}
+                </div>
+                <div>
+                  <p className="font-[Montserrat] font-bold text-[#f9ba48] text-3xl leading-none mb-1">{m.value}</p>
+                  <p className="text-white font-semibold text-sm font-[Montserrat] leading-tight">{m.label}</p>
+                  <p className="text-white/45 text-xs font-[Montserrat] mt-0.5">{m.sub}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Feature grid */}
