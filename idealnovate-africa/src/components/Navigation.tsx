@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef, useCallback } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -134,17 +134,10 @@ export default function Navigation() {
   const [activeMenu,     setActiveMenu]     = useState<string | null>(null);
   const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
   const [mobileSub,      setMobileSub]      = useState<string | null>(null);
-  const navRef    = useRef<HTMLDivElement>(null);
-  const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const navRef = useRef<HTMLDivElement>(null);
 
-  const openMenu = useCallback((label: string) => {
-    if (closeTimer.current) clearTimeout(closeTimer.current);
-    setActiveMenu(label);
-  }, []);
-
-  const scheduleClose = useCallback(() => {
-    closeTimer.current = setTimeout(() => setActiveMenu(null), 120);
-  }, []);
+  const toggleMenu = (label: string) =>
+    setActiveMenu((prev) => (prev === label ? null : label));
 
   useEffect(() => {
     const onScroll = () => setIsScrolled(window.scrollY > 20);
@@ -197,12 +190,9 @@ export default function Navigation() {
           <div className="hidden lg:flex items-center gap-0.5">
 
             {/* ── Learn (Mega menu trigger) ── */}
-            <div
-              className="relative"
-              onMouseEnter={() => openMenu("Learn")}
-              onMouseLeave={scheduleClose}
-            >
+            <div className="relative">
               <button
+                onClick={() => toggleMenu("Learn")}
                 className={`flex items-center gap-1 px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 font-[Montserrat] ${
                   activeMenu === "Learn"
                     ? "text-[#266D67] bg-[#eef6f5]"
@@ -216,14 +206,10 @@ export default function Navigation() {
 
             {/* ── Standard dropdown items ── */}
             {navItems.map((item) => (
-              <div
-                key={item.label}
-                className="relative"
-                onMouseEnter={() => openMenu(item.label)}
-                onMouseLeave={scheduleClose}
-              >
+              <div key={item.label} className="relative">
                 {item.children.length > 0 ? (
                   <button
+                    onClick={() => toggleMenu(item.label)}
                     className={`flex items-center gap-1 px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 font-[Montserrat] ${
                       activeMenu === item.label
                         ? "text-[#266D67] bg-[#eef6f5]"
@@ -284,10 +270,10 @@ export default function Navigation() {
           {/* CTA Buttons */}
           <div className="hidden lg:flex items-center gap-3">
             <Link
-              href="/signin"
+              href="mailto:hello@idealnovate.com?subject=Let%27s%20Talk"
               className="px-5 py-2 text-sm font-semibold text-[#266D67] border border-[#266D67] rounded-lg hover:bg-[#266D67] hover:text-white transition-all duration-200 font-[Montserrat]"
             >
-              Sign In
+              Let&apos;s Talk
             </Link>
             <Link
               href="/company/scholarships"
@@ -317,8 +303,6 @@ export default function Navigation() {
             ? "opacity-100 translate-y-0 pointer-events-auto"
             : "opacity-0 -translate-y-3 pointer-events-none"
         }`}
-        onMouseEnter={() => openMenu("Learn")}
-        onMouseLeave={scheduleClose}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
 
@@ -501,11 +485,11 @@ export default function Navigation() {
           {/* Mobile CTAs */}
           <div className="pt-3 pb-1 flex flex-col gap-3 border-t border-[#e2efee] mt-2">
             <Link
-              href="/signin"
+              href="mailto:hello@idealnovate.com?subject=Let%27s%20Talk"
               className="text-center px-5 py-3 text-sm font-semibold text-[#266D67] border border-[#266D67] rounded-lg hover:bg-[#266D67] hover:text-white transition-all font-[Montserrat]"
               onClick={closeAll}
             >
-              Sign In
+              Let&apos;s Talk
             </Link>
             <Link
               href="/company/scholarships"
