@@ -6,10 +6,10 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import {
   ArrowRight, Star, Clock, CheckCircle, ChevronDown,
-  Palette, Monitor, Globe, Zap, BookOpen, Award,
-  Target, Briefcase, TrendingUp, PenTool, MessageSquare,
+  Megaphone, Monitor, Globe, Zap, BookOpen, Award,
+  Target, Briefcase, TrendingUp, MessageSquare,
   Users, Calendar, Shield, HeartHandshake, GraduationCap,
-  Layers, Search, Brain,
+  Layers, Search, Brain, Video,
 } from "lucide-react";
 import { useState } from "react";
 
@@ -18,158 +18,165 @@ import { useState } from "react";
 const curriculum = [
   {
     module: "01",
-    title: "Introduction to UI/UX Design",
-    desc: "Build a solid foundation in design thinking, UX terminology, and methodology. Explore the Figma workspace and core design principles that underpin every great product.",
-    topics: ["Design thinking methodology", "UX terminology & core concepts", "Figma workspace orientation", "Design principles & visual hierarchy"],
+    title: "Introduction to Video Storytelling",
+    desc: "Understand how great videos are built — from concept to script to final cut. Learn the language of film and apply storytelling frameworks that keep audiences watching.",
+    topics: ["Storytelling principles & narrative arcs", "Video planning & shot lists", "Scripting for short-form & long-form", "Understanding your audience & platform context"],
     duration: "Week 1",
   },
   {
     module: "02",
-    title: "UI/UX Research and Analysis",
-    desc: "Learn how to understand your users deeply. Master research frameworks, user interviews, competitor analysis, and data-driven design decisions.",
-    topics: ["User interviews & surveys", "Competitor & heuristic analysis", "Affinity mapping & synthesis", "Defining user personas & journey maps"],
+    title: "Mobile Video Editing with CapCut",
+    desc: "Master CapCut from zero — editing clips, applying transitions, adding text, and producing polished short-form videos directly from your phone. Perfect for TikTok, Reels, and Shorts.",
+    topics: ["CapCut workspace orientation", "Cuts, transitions & timing", "Text overlays, captions & stickers", "Audio sync & trending sounds"],
     duration: "Week 2",
   },
   {
     module: "03",
-    title: "Wireframes and Figma Components",
-    desc: "Turn ideas into structure. Build low-fidelity wireframes for web and mobile, and master Figma's component and auto-layout systems.",
-    topics: ["Lo-fi wireframing (web & mobile)", "Figma components & variants", "Auto layout fundamentals", "Information architecture & user flows"],
+    title: "Advanced Mobile Editing — InShot & VN",
+    desc: "Expand your mobile toolkit with InShot for quick social content and VN Video Editor for multi-track timelines. Learn when to use each tool to maximise output without slowing down.",
+    topics: ["InShot for Instagram & YouTube Shorts", "VN multi-track timeline editing", "Speed ramping on mobile", "Colour adjustments on mobile devices"],
     duration: "Week 3",
   },
   {
     module: "04",
-    title: "Visual Design and Branding",
-    desc: "Master the art and science of visual communication — typography, colour theory, mood boards, and style guides that bring brands to life.",
-    topics: ["Typography systems & hierarchy", "Colour theory & accessible palettes", "Mood boards & brand identity", "Style guide creation"],
+    title: "Professional PC Editing with DaVinci Resolve",
+    desc: "Transition to the professional desktop workflow. Set up your DaVinci Resolve project, import media, learn the Cut and Edit pages, and understand non-linear editing fundamentals.",
+    topics: ["DaVinci Resolve interface & project setup", "Media management & bins", "Cut page for speed-editing", "Edit page — advanced timeline control"],
     duration: "Week 4",
   },
   {
     module: "05",
-    title: "Introduction to Prototyping",
-    desc: "Transform static designs into interactive experiences. Set up Figma flows, transitions, and micro-interactions that communicate real product behaviour.",
-    topics: ["Figma flows & connections", "Transitions & micro-interactions", "Mobile & desktop prototypes", "Sharing & presenting prototypes"],
+    title: "Colour Grading & Visual Aesthetics",
+    desc: "Learn professional colour correction and grading inside DaVinci Resolve's Colour page — the industry gold standard. Build signature looks, apply LUTs, and make your footage visually compelling.",
+    topics: ["Primary & secondary colour correction", "Applying and creating LUTs", "Skin tone balancing & matching shots", "Building a consistent visual brand aesthetic"],
     duration: "Week 5",
   },
   {
     module: "06",
-    title: "Advanced UI/UX Design in Figma",
-    desc: "Level up your Figma mastery — advanced components, variants, design systems, and portfolio-grade case study building.",
-    topics: ["Advanced component architecture", "Design systems & token libraries", "High-fidelity UI polish", "Case study writing & presentation"],
-    duration: "Weeks 6–7",
+    title: "Audio Design & Sound Engineering",
+    desc: "Great video is 50% audio. Learn to clean up dialogue, layer music, design sound effects, and mix audio tracks to broadcast standard using DaVinci Resolve's Fairlight page.",
+    topics: ["Audio cleanup & noise reduction", "Music layering & sound effects", "Dialogue editing & levelling", "Fairlight audio mixing basics"],
+    duration: "Week 6",
   },
   {
     module: "07",
-    title: "User Experience Design",
-    desc: "Understand the psychology behind habit-forming products. Apply the Hook Model and behavioural design principles to create experiences users love and return to.",
-    topics: ["Habit-forming product design", "The Hook Model (Nir Eyal)", "Emotional design & delight", "Accessibility & inclusive design"],
+    title: "Motion Graphics, Titles & Visual Effects",
+    desc: "Add professional polish — animated titles, lower thirds, kinetic text, and basic VFX using Fusion in DaVinci Resolve and Canva Video for rapid social content creation.",
+    topics: ["Animated titles & lower thirds", "Kinetic typography", "Canva Video for social graphics", "Basic compositing & green screen"],
     duration: "Week 7",
   },
   {
     module: "08",
-    title: "UI/UX Testing and Feedback",
-    desc: "Validate your designs with real users. Conduct usability tests, gather structured feedback, and iterate your way to a polished, user-approved product.",
-    topics: ["Usability testing methods", "Moderated & unmoderated sessions", "Synthesising feedback into iterations", "A/B testing fundamentals"],
+    title: "AI Tools for Video Production",
+    desc: "Supercharge your output with AI. Use AI-powered tools for auto-captioning, scene detection, background removal, voice cloning, and script generation — cutting editing time in half.",
+    topics: ["AI auto-captions & subtitle tools", "AI background removal & scene editing", "Script generation with AI", "AI thumbnail creation & A/B testing"],
     duration: "Week 8",
   },
   {
     module: "09",
-    title: "AI in UI/UX Design & Final Project",
-    desc: "Harness AI tools in your design workflow — from AI-powered research to adaptive interfaces. Complete your capstone project and build your final portfolio piece.",
-    topics: ["AI-powered UX research tools", "Generative UI & adaptive interfaces", "Capstone project (end-to-end product)", "Portfolio presentation & review"],
-    duration: "Week 9–10",
+    title: "Content Strategy & Monetisation",
+    desc: "Go beyond editing — build a repeatable content engine. Learn platform algorithms, content scheduling, packaging your skills as a freelancer, and pricing your video production services.",
+    topics: ["Platform algorithm essentials (TikTok, YT, Reels)", "Content calendar & batch editing workflows", "Freelance pricing & client management", "YouTube monetisation fundamentals"],
+    duration: "Week 9",
+  },
+  {
+    module: "10",
+    title: "Portfolio, Final Project & Career Launch",
+    desc: "Produce your capstone video project — a full-scale production that showcases every skill from the programme. Build your public portfolio, craft your client pitch, and prepare for job applications or freelancing.",
+    topics: ["Capstone video project (production & post)", "Portfolio assembly & showreel creation", "Client pitch deck & rate card", "LinkedIn & Upwork profile optimisation for video editors"],
+    duration: "Week 10",
   },
 ];
 
 const testimonials = [
   {
-    name: "Adaeze Okafor",
-    role: "UI/UX Designer @ Paystack",
-    text: "The curriculum is incredibly thorough — 9 modules covering everything from research to AI-powered design. I landed my Paystack role before even finishing the final project.",
+    name: "Temi Oladipo",
+    role: "Video Editor @ TechPoint Africa",
+    text: "I started with zero PC editing experience — just phone edits. By Week 5 I was colour grading in DaVinci Resolve like a pro. The progression is perfectly designed.",
     rating: 5,
-    avatar: "AO",
+    avatar: "TO",
     color: "#266D67",
   },
   {
-    name: "Segun Adeyemi",
-    role: "Product Designer @ Flutterwave",
-    text: "I was a graphics artist earning ₦80k a month. After completing the diploma, I joined Flutterwave as a product designer on ₦350k. The ROI is insane.",
+    name: "Chisom Nwosu",
+    role: "Content Creator (800K TikTok)",
+    text: "The CapCut and AI tools modules alone were worth the full programme fee. My video production speed tripled — I now produce 5× more content with a fraction of the effort.",
     rating: 5,
-    avatar: "SA",
+    avatar: "CN",
     color: "#f9ba48",
   },
   {
-    name: "Chiamaka Eze",
-    role: "Freelance UI/UX Designer",
-    text: "The Figma components module alone transformed how I work. I now build client projects 3× faster and charge premium rates. Worth every kobo.",
+    name: "Kwabena Asante",
+    role: "Freelance Video Editor (Ghana)",
+    text: "I landed my first ₵8,000 client project two weeks after completing the programme. The freelance pricing module taught me to value my skills — which most editors never learn.",
     rating: 4,
-    avatar: "CE",
+    avatar: "KA",
     color: "#163d3a",
   },
   {
-    name: "Kofi Mensah",
-    role: "UX Designer @ Bolt (Ghana)",
-    text: "The live sessions and mentor feedback were exceptional. My mentor had worked at top design agencies — you can't put a price on that kind of guidance.",
+    name: "Amara Diallo",
+    role: "Video Producer @ Moniepoint",
+    text: "The colour grading module changed everything. I could instantly see the difference in my work. Clients now comment on the cinematic look of every video — they've doubled my rate.",
     rating: 5,
-    avatar: "KM",
+    avatar: "AD",
     color: "#266D67",
   },
   {
-    name: "Ngozi Uche",
-    role: "Design Lead @ Andela",
-    text: "The portfolio coaching in Module 6 is what separates Idealnovate from every other course. My case studies got compliments in every single interview.",
-    rating: 4,
-    avatar: "NU",
+    name: "Femi Adebisi",
+    role: "Brand Video Lead @ Paystack",
+    text: "Having mobile AND desktop editing in one programme is rare. Most courses pick one — Idealnovate gave us both, which is exactly what real brands need from a versatile editor.",
+    rating: 5,
+    avatar: "FA",
     color: "#163d3a",
   },
   {
-    name: "Tunde Bakare",
-    role: "UI Designer @ Interswitch",
-    text: "The AI module at the end is a game-changer. Most design courses completely ignore AI tools — Idealnovate built it right into the programme.",
+    name: "Adaeze Eze",
+    role: "Social Media Manager & Editor @ GTBank",
+    text: "The AI tools module is a game changer. My video turnaround went from 3 days to same-day delivery for basic edits. My team thinks I hired a second editor.",
     rating: 5,
-    avatar: "TB",
+    avatar: "AE",
     color: "#f9ba48",
   },
 ];
 
 const faqs = [
   {
-    q: "Do I need design experience to enrol in this diploma?",
-    a: "Not at all. The diploma starts from absolute zero — no Figma experience, no design background required. All you need is a laptop, an internet connection, and the drive to learn. We've had engineers, accountants, teachers, and stay-at-home parents all graduate successfully.",
+    q: "Do I need any prior editing experience to join this programme?",
+    a: "None at all. The programme is built for complete beginners — we start from understanding how video works before touching any software. If you've already used CapCut on your phone, you'll be ahead of the curve by Week 2.",
   },
   {
-    q: "What tools will I use during the programme?",
-    a: "Figma is the primary tool and you'll go from complete beginner to advanced professional-level use across 9 modules. You'll also explore Figma plugins, collaborative design workflows, and AI-powered design tools in the final module.",
+    q: "What devices do I need — phone, laptop, or both?",
+    a: "Ideally both. The mobile modules (CapCut, InShot, VN) run on Android or iPhone. The PC modules use DaVinci Resolve, which is free and runs on Windows or Mac. If you only have one device, let our admissions team know and we'll tailor the focus of your programme accordingly.",
   },
   {
-    q: "How are classes delivered — live or recorded?",
-    a: "Classes are fully virtual. Core lessons are delivered live (minimum 2 sessions per week, up to 2 hours each), with all sessions recorded so you never fall behind. Diploma students also get 1-on-1 mentor check-ins and live cohort review calls.",
+    q: "Is DaVinci Resolve expensive? Do I need to buy it?",
+    a: "DaVinci Resolve has a fully free version that covers everything taught in this programme. You do not need to purchase any software. The free version is what many professional editors use day-to-day.",
   },
   {
-    q: "How long does the diploma take to complete?",
-    a: "The diploma runs for 8–10 weeks — roughly 2 sessions per week of up to 2 hours. Most students dedicate 1–2 hours per day and complete everything within the cohort timeframe. There is no rushing — you move through structured modules at a steady pace.",
+    q: "How are classes delivered — live or pre-recorded?",
+    a: "Classes are delivered live with a minimum of 2 sessions per week (up to 2 hours each), and all sessions are recorded so you never fall behind. You also get mentor check-ins and live cohort reviews throughout the 10 weeks.",
   },
   {
-    q: "Is scholarship funding available?",
-    a: "Yes. We offer an 80% scholarship to qualifying applicants — meaning you only pay 20% as a registration fee. Apply via our scholarship page and our admissions team will review your application within 5 business days.",
+    q: "Can I use this programme to go freelance, or is it only for employment?",
+    a: "Both paths are fully supported. Module 9 dedicates a full week to freelance strategy — pricing, client pitching, contracts, and platforms like Upwork. Module 10 covers both job applications and building a freelance portfolio. Many graduates freelance part-time while still employed.",
   },
   {
-    q: "What happens to my portfolio during the programme?",
-    a: "Portfolio building is central to the programme. From Module 3 onwards, every project you build contributes to your portfolio. By graduation, you'll have a minimum of 5 polished case studies — reviewed and refined with mentor feedback — ready to show employers.",
+    q: "Is a scholarship available for this programme?",
+    a: "Yes. We offer 80% scholarships to qualifying applicants — you pay only the 20% registration fee to secure your seat. Apply via our Scholarship page and our admissions team will review your application within 5 business days.",
   },
   {
-    q: "Will I be job-ready by the time I graduate?",
-    a: "That's the goal. 94% of our design graduates land relevant roles within 6 months. You'll leave with a professional portfolio, a globally recognised certification, and access to our employer network — companies that actively recruit from our talent pool.",
+    q: "What certificate do I receive on completion?",
+    a: "You receive an Idealnovate Professional Certificate in Video Editing (Mobile & PC) — a digitally verifiable credential with a LinkedIn-ready badge. The certificate is recognised by 48+ hiring partners across Africa and is accepted for international remote job applications.",
   },
   {
-    q: "What is the certification I receive on completion?",
-    a: "You receive an Idealnovate Professional Certificate in UI/UX Design — a digitally verifiable credential accepted by 48+ hiring partners across Africa and internationally. It includes a LinkedIn-ready digital badge to showcase on your profile.",
+    q: "What types of videos will I be able to edit by graduation?",
+    a: "By graduation you'll be able to edit social media content (TikTok, Reels, Shorts, YouTube), corporate brand videos, product demos, event recaps, vlogs, documentary-style pieces, and client-ready commercial productions — on both mobile and desktop.",
   },
 ];
 
 // ─── Page ─────────────────────────────────────────────────────────────────────
 
-export default function UIUXDesignPage() {
+export default function VideoEditingPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [openModule, setOpenModule] = useState<number | null>(0);
 
@@ -182,141 +189,136 @@ export default function UIUXDesignPage() {
             1. HERO — Split Left / Right
         ══════════════════════════════════════════ */}
         <section className="bg-[#163d3a] pt-24 overflow-hidden">
-          {/* Full-bleed grid — no container so right image reaches the viewport edge */}
           <div className="grid lg:grid-cols-2 gap-0 items-stretch min-h-[88vh]">
 
-              {/* LEFT — Content with its own padding mirroring the site container */}
-              <div className="flex flex-col justify-center py-12 lg:py-20 px-4 sm:px-6 lg:px-12 xl:px-20 2xl:px-28">
-                {/* Breadcrumb */}
-                <div className="flex items-center gap-2 mb-6">
-                  <Link
-                    href="/learn/design-school"
-                    className="text-white/40 hover:text-white/60 transition-colors text-xs font-[Montserrat]"
-                  >
-                    Design School
-                  </Link>
-                  <span className="text-white/25">/</span>
-                  <span className="inline-flex items-center gap-2 px-3 py-1 bg-[#f9ba48]/15 border border-[#f9ba48]/30 rounded-full text-[#f9ba48] text-xs font-bold font-[Montserrat]">
-                    <Palette className="w-3 h-3" />
-                    UI/UX Design Diploma
-                  </span>
-                </div>
-
-                <h1
-                  className="font-[Montserrat] font-bold text-white leading-[1.08] tracking-tight mb-5"
-                  style={{ fontSize: "clamp(2.2rem, 5vw, 3.8rem)" }}
+            {/* LEFT — Content */}
+            <div className="flex flex-col justify-center py-12 lg:py-20 px-4 sm:px-6 lg:px-12 xl:px-20 2xl:px-28">
+              {/* Breadcrumb */}
+              <div className="flex items-center gap-2 mb-6">
+                <Link
+                  href="/learn/marketing-school"
+                  className="text-white/40 hover:text-white/60 transition-colors text-xs font-[Montserrat]"
                 >
-                  Become a Certified<br />
-                  <span className="text-[#f9ba48]">UI/UX Designer</span>
-                </h1>
+                  Marketing School
+                </Link>
+                <span className="text-white/25">/</span>
+                <span className="inline-flex items-center gap-2 px-3 py-1 bg-[#f9ba48]/15 border border-[#f9ba48]/30 rounded-full text-[#f9ba48] text-xs font-bold font-[Montserrat]">
+                  <Video className="w-3 h-3" />
+                  Video Editing Diploma
+                </span>
+              </div>
 
-                <p className="font-[Montserrat] text-white/60 text-base sm:text-lg leading-relaxed mb-8 max-w-md">
-                  Master design thinking, prototyping, and user experience with Africa&apos;s leading digital academy.
-                </p>
+              <h1
+                className="font-[Montserrat] font-bold text-white leading-[1.08] tracking-tight mb-5"
+                style={{ fontSize: "clamp(2.2rem, 5vw, 3.8rem)" }}
+              >
+                Edit Video Like a<br />
+                <span className="text-[#f9ba48]">Professional Creator</span>
+              </h1>
 
-                {/* Key feature badges */}
-                <div className="grid grid-cols-2 gap-3 mb-8">
-                  {[
-                    { icon: <Clock className="w-4 h-4" />, label: "Duration", value: "10 Weeks" },
-                    { icon: <Monitor className="w-4 h-4" />, label: "Learning Mode", value: "Online" },
-                    { icon: <Globe className="w-4 h-4" />, label: "Job Opportunities", value: "Global & Local Tech Roles" },
-                    { icon: <Star className="w-4 h-4" fill="currentColor" />, label: "Alumni Rating", value: "4.8 / 5 ★" },
-                  ].map((f) => (
+              <p className="font-[Montserrat] text-white/60 text-base sm:text-lg leading-relaxed mb-8 max-w-md">
+                Master mobile and PC video editing — from CapCut to DaVinci Resolve — and build a career in Africa&apos;s fastest-growing creative industry.
+              </p>
+
+              {/* Key feature badges */}
+              <div className="grid grid-cols-2 gap-3 mb-8">
+                {[
+                  { icon: <Clock className="w-4 h-4" />, label: "Duration", value: "10 Weeks" },
+                  { icon: <Monitor className="w-4 h-4" />, label: "Learning Mode", value: "Online" },
+                  { icon: <Globe className="w-4 h-4" />, label: "Career Paths", value: "Freelance & Employment" },
+                  { icon: <Star className="w-4 h-4" fill="currentColor" />, label: "Alumni Rating", value: "4.7 / 5 ★" },
+                ].map((f) => (
+                  <div
+                    key={f.label}
+                    className="flex items-center gap-3 bg-white/6 border border-white/10 rounded-xl px-4 py-3"
+                  >
+                    <div className="text-[#f9ba48] shrink-0">{f.icon}</div>
+                    <div>
+                      <p className="text-white/40 text-[10px] font-[Montserrat] uppercase tracking-wider">{f.label}</p>
+                      <p className="text-white font-bold text-xs font-[Montserrat] leading-tight">{f.value}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* CTA buttons */}
+              <div className="flex flex-col sm:flex-row gap-3">
+                <a
+                  href="mailto:hello@idealnovate.com?subject=Admissions%20Enquiry%20%E2%80%93%20Video%20Editing%20Diploma"
+                  className="group inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-[#f9ba48] text-white font-bold text-sm rounded-lg hover:bg-[#d4a030] transition-all shadow-lg font-[Montserrat]"
+                >
+                  <MessageSquare className="w-4 h-4" />
+                  Talk with Admissions
+                </a>
+                <Link
+                  href="/company/scholarships"
+                  className="group inline-flex items-center justify-center gap-2 px-7 py-3.5 border border-white/20 text-white font-semibold text-sm rounded-lg hover:bg-white/10 transition-all font-[Montserrat]"
+                >
+                  Start an Application
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </div>
+
+              {/* Social proof */}
+              <div className="flex items-center gap-3 mt-8 pt-8 border-t border-white/10">
+                <div className="flex -space-x-2">
+                  {["TO", "CN", "KA", "AD", "FA"].map((init, i) => (
                     <div
-                      key={f.label}
-                      className="flex items-center gap-3 bg-white/6 border border-white/10 rounded-xl px-4 py-3"
+                      key={i}
+                      className="w-7 h-7 rounded-full border-2 border-[#163d3a] flex items-center justify-center text-[9px] font-bold text-white"
+                      style={{ background: i % 2 === 0 ? "#f9ba48" : "#266D67" }}
                     >
-                      <div className="text-[#f9ba48] shrink-0">{f.icon}</div>
-                      <div>
-                        <p className="text-white/40 text-[10px] font-[Montserrat] uppercase tracking-wider">{f.label}</p>
-                        <p className="text-white font-bold text-xs font-[Montserrat] leading-tight">{f.value}</p>
-                      </div>
+                      {init}
                     </div>
                   ))}
                 </div>
+                <p className="text-white/45 text-xs font-[Montserrat]">
+                  Joined by <span className="text-white/70 font-semibold">1,400+ creators</span> across Africa
+                </p>
+              </div>
+            </div>
 
-                {/* CTA buttons */}
-                <div className="flex flex-col sm:flex-row gap-3">
-                  <a
-                    href="mailto:hello@idealnovate.com?subject=Admissions%20Enquiry%20%E2%80%93%20UI%2FUX%20Design%20Diploma"
-                    className="group inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-[#f9ba48] text-white font-bold text-sm rounded-lg hover:bg-[#d4a030] transition-all shadow-lg font-[Montserrat]"
-                  >
-                    <MessageSquare className="w-4 h-4" />
-                    Talk with Admissions
-                  </a>
-                  <Link
-                    href="/company/scholarships"
-                    className="group inline-flex items-center justify-center gap-2 px-7 py-3.5 border border-white/20 text-white font-semibold text-sm rounded-lg hover:bg-white/10 transition-all font-[Montserrat]"
-                  >
-                    Start an Application
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                  </Link>
-                </div>
+            {/* RIGHT — Full-bleed image */}
+            <div className="relative hidden lg:block">
+              <Image
+                src="/IdealTalent5.png"
+                alt="Video Editing learners at Idealnovate"
+                fill
+                className="object-cover object-top"
+                priority
+              />
+              <div
+                className="absolute inset-0"
+                style={{ background: "linear-gradient(to right, #163d3a 0%, transparent 30%)" }}
+              />
+              <div
+                className="absolute inset-0"
+                style={{ background: "linear-gradient(to top, #163d3a 0%, transparent 25%)" }}
+              />
 
-                {/* Social proof */}
-                <div className="flex items-center gap-3 mt-8 pt-8 border-t border-white/10">
-                  <div className="flex -space-x-2">
-                    {["AO", "SA", "CE", "KM", "NU"].map((init, i) => (
-                      <div
-                        key={i}
-                        className="w-7 h-7 rounded-full border-2 border-[#163d3a] flex items-center justify-center text-[9px] font-bold text-white"
-                        style={{ background: i % 2 === 0 ? "#f9ba48" : "#266D67" }}
-                      >
-                        {init}
-                      </div>
-                    ))}
+              {/* Floating stat card */}
+              <div className="absolute top-8 right-8 bg-white rounded-2xl p-4 shadow-2xl">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-xl bg-[#eef6f5] flex items-center justify-center text-[#266D67]">
+                    <Award className="w-5 h-5" />
                   </div>
-                  <p className="text-white/45 text-xs font-[Montserrat]">
-                    Joined by <span className="text-white/70 font-semibold">3,120+ designers</span> across Africa
-                  </p>
+                  <div>
+                    <p className="font-bold text-[#163d3a] text-xl font-[Montserrat] leading-none">87%</p>
+                    <p className="text-gray-400 text-xs font-[Montserrat]">Job placement rate</p>
+                  </div>
                 </div>
               </div>
 
-              {/* RIGHT — Contained image card, centred in column with padding */}
-              <div className="hidden lg:flex flex-col justify-center py-12 lg:py-16 px-8 xl:px-12">
-                <div className="relative rounded-3xl overflow-hidden flex-1 min-h-[500px]">
-                  <Image
-                    src="/IdealTalent2.png"
-                    alt="UI/UX Design learners at Idealnovate"
-                    fill
-                    className="object-cover object-top"
-                    priority
-                  />
-                  {/* Left fade blending into dark hero bg */}
-                  <div
-                    className="absolute inset-0"
-                    style={{ background: "linear-gradient(to right, rgba(22,61,58,0.4) 0%, transparent 35%)" }}
-                  />
-                  {/* Bottom vignette */}
-                  <div
-                    className="absolute inset-0"
-                    style={{ background: "linear-gradient(to top, rgba(22,61,58,0.55) 0%, transparent 40%)" }}
-                  />
-
-                  {/* Floating stat card */}
-                  <div className="absolute top-6 right-6 bg-white rounded-2xl p-4 shadow-2xl">
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-xl bg-[#eef6f5] flex items-center justify-center text-[#266D67]">
-                        <Award className="w-5 h-5" />
-                      </div>
-                      <div>
-                        <p className="font-bold text-[#163d3a] text-xl font-[Montserrat] leading-none">94%</p>
-                        <p className="text-gray-400 text-xs font-[Montserrat]">Job placement rate</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Floating tool badge */}
-                  <div className="absolute bottom-6 right-6 bg-[#163d3a] border border-white/10 rounded-xl px-4 py-3">
-                    <p className="text-white/50 text-[10px] font-[Montserrat] mb-1 uppercase tracking-wider">Primary Tool</p>
-                    <div className="flex items-center gap-2">
-                      <PenTool className="w-4 h-4 text-[#f9ba48]" />
-                      <span className="text-white font-bold text-sm font-[Montserrat]">Figma</span>
-                    </div>
-                  </div>
+              {/* Floating tool badge */}
+              <div className="absolute bottom-10 right-8 bg-[#163d3a] border border-white/10 rounded-xl px-4 py-3">
+                <p className="text-white/50 text-[10px] font-[Montserrat] mb-1 uppercase tracking-wider">Primary Tools</p>
+                <div className="flex items-center gap-2">
+                  <Video className="w-4 h-4 text-[#f9ba48]" />
+                  <span className="text-white font-bold text-sm font-[Montserrat]">CapCut + DaVinci</span>
                 </div>
               </div>
             </div>
+          </div>
         </section>
 
         {/* ══════════════════════════════════════════
@@ -326,42 +328,42 @@ export default function UIUXDesignPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-2xl mx-auto mb-14">
               <span className="inline-flex items-center gap-2 px-4 py-2 bg-[#eef6f5] text-[#266D67] text-sm font-semibold rounded-full mb-4 font-[Montserrat]">
-                <Palette className="w-3.5 h-3.5" />
+                <Megaphone className="w-3.5 h-3.5" />
                 Why Learn With Us
               </span>
               <h2 className="font-[Montserrat] font-bold text-3xl sm:text-4xl lg:text-5xl text-[#163d3a] leading-tight">
-                The Only Design School<br />
-                <span className="text-[#266D67]">Built to Get You Hired</span>
+                The Only Video Programme<br />
+                <span className="text-[#266D67]">Built for African Creators</span>
               </h2>
               <p className="mt-4 text-gray-500 font-[Montserrat] font-light text-lg leading-relaxed">
-                We don&apos;t just teach you to design — we put you on a direct track from your first lesson to your first paycheck.
+                We don&apos;t just teach software — we build editors who can create, monetise, and grow a career in video production.
               </p>
             </div>
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
               {[
                 {
-                  icon: <PenTool className="w-7 h-7" />,
-                  title: "Industry-Relevant Skills",
-                  desc: "Master Figma from beginner to advanced, plus AI-powered design tools that top companies use daily. Every skill you learn is directly mapped to what employers are hiring for right now.",
+                  icon: <Video className="w-7 h-7" />,
+                  title: "Mobile & PC Mastery",
+                  desc: "Learn to edit on your phone with CapCut, InShot and VN — then graduate to professional PC workflows with DaVinci Resolve. Most courses teach one; we teach both because the industry expects both.",
                   color: "#f9ba48",
                 },
                 {
                   icon: <TrendingUp className="w-7 h-7" />,
-                  title: "Increased Earnings",
-                  desc: "UI/UX designers in Africa earn ₦300k–₦600k+ monthly. Our graduates report an average 3× salary increase within 6 months of completing the diploma — with global remote opportunities on top.",
+                  title: "High-Income Creative Skill",
+                  desc: "Skilled video editors in Africa earn ₦200k–₦500k+ monthly. Content creators and video production agencies are paying top rates for editors who combine speed, quality, and AI fluency.",
                   color: "#266D67",
                 },
                 {
                   icon: <Briefcase className="w-7 h-7" />,
-                  title: "Internship Access",
-                  desc: "Get direct access to professional internship placements with our partner organisations. Build real experience, earn a reference, and fast-track your entry into the industry before you even graduate.",
+                  title: "Freelance-Ready From Day One",
+                  desc: "We teach the full freelance stack — not just editing. Pricing, client management, contracts, and portfolio building are embedded in the programme so you can take paying clients before you graduate.",
                   color: "#163d3a",
                 },
                 {
                   icon: <Users className="w-7 h-7" />,
-                  title: "Community Support",
-                  desc: "Join a thriving network of 3,120+ designers across Africa. Get peer feedback, collaborate on projects, attend live events, and stay connected to a community that grows with you long after graduation.",
+                  title: "Community of Creators",
+                  desc: "Join a network of 1,400+ video editors and content creators across Africa. Collaborate on projects, get peer feedback, share client referrals, and build professional relationships that last beyond graduation.",
                   color: "#f9ba48",
                 },
               ].map((b, i) => (
@@ -391,17 +393,14 @@ export default function UIUXDesignPage() {
             TOOLS YOU'LL MASTER
         ══════════════════════════════════════════ */}
         <section className="relative overflow-hidden py-20 bg-[#163d3a]">
-          {/* Ambient glows */}
           <div className="absolute top-0 left-1/4 w-[500px] h-[500px] opacity-20 blur-[100px] rounded-full pointer-events-none"
             style={{ background: "radial-gradient(circle, #266D67 0%, transparent 70%)" }} />
           <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] opacity-15 blur-[80px] rounded-full pointer-events-none"
             style={{ background: "radial-gradient(circle, #f9ba48 0%, transparent 70%)" }} />
-          {/* Subtle dot grid */}
           <div className="absolute inset-0 opacity-[0.04] pointer-events-none"
             style={{ backgroundImage: "radial-gradient(circle, rgba(255,255,255,0.8) 1px, transparent 1px)", backgroundSize: "28px 28px" }} />
 
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            {/* Header */}
             <div className="text-center mb-16">
               <span className="inline-flex items-center gap-2 px-4 py-2 bg-white/6 border border-white/12 rounded-full text-white/50 text-xs font-semibold font-[Montserrat] mb-5 uppercase tracking-widest">
                 <Zap className="w-3 h-3 text-[#f9ba48]" />
@@ -413,140 +412,126 @@ export default function UIUXDesignPage() {
                 <span className="text-[#f9ba48]"> Master</span>
               </h2>
               <p className="text-white/45 font-[Montserrat] text-lg max-w-lg mx-auto leading-relaxed">
-                Get hands-on with the exact tools world-class design teams use every day — from day one.
+                Get hands-on with the exact tools professional video editors and top creators use every day.
               </p>
             </div>
 
-            {/* Tool cards */}
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
               {[
                 {
-                  name: "Figma",
-                  tagline: "Interface Design",
-                  glow: "rgba(242,78,30,0.5)",
-                  iconBg: "linear-gradient(145deg, #1e1e1e 0%, #2a2a2a 100%)",
-                  icon: (
-                    <svg viewBox="0 0 38 57" className="w-9 h-9" fill="none">
-                      <path d="M19 28.5a9.5 9.5 0 1 1 19 0 9.5 9.5 0 0 1-19 0z" fill="#1ABCFE"/>
-                      <path d="M0 47.5C0 41.977 4.477 38 9.5 38H19v9.5C19 53.023 14.523 57 9.5 57S0 53.023 0 47.5z" fill="#0ACF83"/>
-                      <path d="M19 0v19h9.5C33.523 19 38 14.523 38 9.5S33.523 0 28.5 0H19z" fill="#FF7262"/>
-                      <path d="M0 9.5C0 14.523 4.477 19 9.5 19H19V0H9.5C4.477 0 0 4.477 0 9.5z" fill="#F24E1E"/>
-                      <path d="M0 28.5C0 33.523 4.477 38 9.5 38H19V19H9.5C4.477 19 0 23.477 0 28.5z" fill="#A259FF"/>
-                    </svg>
-                  ),
-                  accent: "#F24E1E",
-                },
-                {
-                  name: "Miro",
-                  tagline: "Collaborative Boards",
-                  glow: "rgba(255,208,47,0.45)",
-                  iconBg: "linear-gradient(145deg, #FFD02F 0%, #FFE566 100%)",
+                  name: "CapCut",
+                  tagline: "Mobile & PC Editing",
+                  glow: "rgba(0,0,0,0.6)",
+                  iconBg: "linear-gradient(145deg, #000000 0%, #1a1a1a 100%)",
                   icon: (
                     <svg viewBox="0 0 40 40" className="w-9 h-9" fill="none">
-                      <path d="M7 30V10l7.5 14L20 14l5.5 10L33 10v20" stroke="#050038" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round"/>
+                      <circle cx="20" cy="20" r="12" fill="white" fillOpacity="0.15"/>
+                      <path d="M16 14l12 6-12 6V14z" fill="white"/>
+                      <circle cx="20" cy="20" r="3" fill="white" fillOpacity="0.4"/>
                     </svg>
                   ),
-                  accent: "#FFD02F",
+                  accent: "#ffffff",
                 },
                 {
-                  name: "Lovable AI",
-                  tagline: "AI Product Builder",
-                  glow: "rgba(232,67,147,0.45)",
-                  iconBg: "linear-gradient(145deg, #C2185B 0%, #E91E8C 100%)",
+                  name: "DaVinci",
+                  tagline: "Professional Grading",
+                  glow: "rgba(255,90,0,0.5)",
+                  iconBg: "linear-gradient(145deg, #1c1c1e 0%, #2d2d2f 100%)",
                   icon: (
                     <svg viewBox="0 0 40 40" className="w-9 h-9" fill="none">
-                      <path d="M20 34S5 24.5 5 14.5a7.875 7.875 0 0 1 15-3.3 7.875 7.875 0 0 1 15 3.3C35 24.5 20 34 20 34z" fill="white"/>
-                      <path d="M20 34S5 24.5 5 14.5a7.875 7.875 0 0 1 15-3.3 7.875 7.875 0 0 1 15 3.3C35 24.5 20 34 20 34z" fill="url(#lv)" fillOpacity="0.3"/>
-                      <defs>
-                        <linearGradient id="lv" x1="5" y1="10" x2="35" y2="34" gradientUnits="userSpaceOnUse">
-                          <stop stopColor="#FF6B9D"/>
-                          <stop offset="1" stopColor="#C2185B"/>
-                        </linearGradient>
-                      </defs>
+                      <path d="M20 6C12.268 6 6 12.268 6 20s6.268 14 14 14 14-6.268 14-14S27.732 6 20 6z" fill="none" stroke="#FF5A00" strokeWidth="2.5"/>
+                      <path d="M14 20c0-3.314 2.686-6 6-6s6 2.686 6 6-2.686 6-6 6-6-2.686-6-6z" fill="#FF5A00" fillOpacity="0.8"/>
+                      <circle cx="20" cy="20" r="2" fill="white"/>
                     </svg>
                   ),
-                  accent: "#E91E8C",
+                  accent: "#FF5A00",
                 },
                 {
-                  name: "FigJam",
-                  tagline: "Whiteboard & Ideation",
-                  glow: "rgba(24,160,251,0.45)",
-                  iconBg: "linear-gradient(145deg, #18A0FB 0%, #5BC8FF 100%)",
+                  name: "Adobe Premiere",
+                  tagline: "Industry Standard",
+                  glow: "rgba(159,51,255,0.45)",
+                  iconBg: "linear-gradient(145deg, #2c0059 0%, #5a0096 100%)",
                   icon: (
                     <svg viewBox="0 0 40 40" className="w-9 h-9" fill="none">
-                      <rect x="6" y="7" width="17" height="20" rx="2.5" fill="white" fillOpacity="0.95"/>
-                      <rect x="17" y="13" width="17" height="20" rx="2.5" fill="white" fillOpacity="0.55"/>
-                      <path d="M10 13h9M10 17h9M10 21h5" stroke="#18A0FB" strokeWidth="1.5" strokeLinecap="round"/>
+                      <path d="M8 32V8l10 14L8 32z" fill="white" fillOpacity="0.9"/>
+                      <path d="M32 32V8L22 22l10 10z" fill="white" fillOpacity="0.5"/>
+                      <path d="M13 20h14" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeOpacity="0.4"/>
                     </svg>
                   ),
-                  accent: "#18A0FB",
+                  accent: "#9F33FF",
                 },
                 {
-                  name: "Claude AI",
-                  tagline: "AI Research Assistant",
-                  glow: "rgba(217,119,87,0.45)",
-                  iconBg: "linear-gradient(145deg, #C4673A 0%, #E8906A 100%)",
+                  name: "InShot",
+                  tagline: "Quick Social Edits",
+                  glow: "rgba(70,191,127,0.45)",
+                  iconBg: "linear-gradient(145deg, #1DB954 0%, #46BF7F 100%)",
                   icon: (
                     <svg viewBox="0 0 40 40" className="w-9 h-9" fill="none">
-                      <path d="M20 7l9 22H11L20 7z" fill="white" fillOpacity="0.95"/>
-                      <path d="M14.5 22h11" stroke="#C4673A" strokeWidth="2" strokeLinecap="round"/>
-                      <circle cx="20" cy="33" r="2" fill="white" fillOpacity="0.6"/>
+                      <rect x="8" y="12" width="16" height="16" rx="3" fill="white" fillOpacity="0.9"/>
+                      <path d="M28 16l5 4-5 4V16z" fill="white"/>
+                      <path d="M11 18h10M11 22h7" stroke="#1DB954" strokeWidth="1.5" strokeLinecap="round"/>
                     </svg>
                   ),
-                  accent: "#D97757",
+                  accent: "#1DB954",
                 },
                 {
-                  name: "Figma AI",
-                  tagline: "AI-Powered Design",
-                  glow: "rgba(151,71,255,0.45)",
-                  iconBg: "linear-gradient(145deg, #7B2FBE 0%, #A855F7 100%)",
+                  name: "Canva Video",
+                  tagline: "Social Content",
+                  glow: "rgba(0,196,204,0.45)",
+                  iconBg: "linear-gradient(145deg, #00C4CC 0%, #7D2AE8 100%)",
                   icon: (
                     <svg viewBox="0 0 40 40" className="w-9 h-9" fill="none">
-                      <path d="M20 8v5M20 27v5M8 20h5M27 20h5" stroke="white" strokeWidth="2.5" strokeLinecap="round"/>
-                      <path d="M12.2 12.2l3.5 3.5M24.3 24.3l3.5 3.5M27.8 12.2l-3.5 3.5M15.7 24.3l-3.5 3.5" stroke="white" strokeWidth="2" strokeLinecap="round" strokeOpacity="0.5"/>
-                      <circle cx="20" cy="20" r="4.5" fill="white"/>
-                      <circle cx="20" cy="20" r="2" fill="#A855F7"/>
+                      <rect x="7" y="13" width="26" height="14" rx="4" fill="white" fillOpacity="0.2"/>
+                      <rect x="7" y="13" width="26" height="14" rx="4" stroke="white" strokeWidth="1.5"/>
+                      <path d="M17 17.5C17 16.67 17.67 16 18.5 16c.38 0 .74.14 1.01.38L22 19l-2.49 2.62A1.5 1.5 0 0117 20.5v-3z" fill="white"/>
+                      <circle cx="26" cy="20" r="2.5" fill="white" fillOpacity="0.8"/>
                     </svg>
                   ),
-                  accent: "#9747FF",
+                  accent: "#00C4CC",
+                },
+                {
+                  name: "VN Editor",
+                  tagline: "Multi-Track Mobile",
+                  glow: "rgba(249,186,72,0.45)",
+                  iconBg: "linear-gradient(145deg, #c47f00 0%, #f9ba48 100%)",
+                  icon: (
+                    <svg viewBox="0 0 40 40" className="w-9 h-9" fill="none">
+                      <rect x="7" y="12" width="26" height="5" rx="2.5" fill="white" fillOpacity="0.9"/>
+                      <rect x="7" y="20" width="20" height="5" rx="2.5" fill="white" fillOpacity="0.6"/>
+                      <rect x="7" y="28" width="14" height="4" rx="2" fill="white" fillOpacity="0.35"/>
+                    </svg>
+                  ),
+                  accent: "#f9ba48",
                 },
               ].map((tool) => (
                 <div
                   key={tool.name}
                   className="group relative flex flex-col items-center text-center p-6 rounded-2xl border border-white/8 bg-white/4 hover:bg-white/8 hover:border-white/16 transition-all duration-300 hover:-translate-y-2 cursor-default"
                 >
-                  {/* Per-card colour glow on hover */}
                   <div
                     className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
                     style={{ boxShadow: `0 0 40px 0 ${tool.glow}` }}
                   />
-
-                  {/* Icon container */}
                   <div
                     className="relative w-16 h-16 rounded-2xl flex items-center justify-center mb-5 transition-transform duration-300 group-hover:scale-110 shadow-lg"
                     style={{ background: tool.iconBg }}
                   >
-                    {/* Shine overlay */}
                     <div className="absolute inset-0 rounded-2xl"
                       style={{ background: "linear-gradient(135deg, rgba(255,255,255,0.15) 0%, transparent 60%)" }} />
                     <div className="relative z-10">{tool.icon}</div>
                   </div>
-
-                  {/* Accent line that appears on hover */}
                   <div
                     className="w-6 h-0.5 rounded-full mb-3 opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:w-10"
                     style={{ background: tool.accent }}
                   />
-
                   <p className="font-[Montserrat] font-bold text-white text-sm leading-tight mb-1">{tool.name}</p>
                   <p className="font-[Montserrat] text-white/35 text-xs leading-snug">{tool.tagline}</p>
                 </div>
               ))}
             </div>
 
-            {/* Bottom note */}
             <p className="text-center text-white/25 text-xs font-[Montserrat] mt-10">
-              All tools are introduced progressively throughout the 9 modules — no prior experience required.
+              All tools are introduced progressively across 10 modules — mobile tools first, then professional PC workflows.
             </p>
           </div>
         </section>
@@ -557,20 +542,20 @@ export default function UIUXDesignPage() {
         <section className="py-14 bg-[#f4f9f8] border-y border-[#e2efee]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <p className="text-center font-[Montserrat] text-xs font-semibold text-gray-400 uppercase tracking-widest mb-8">
-              Where our alumni work
+              Where our alumni work & create
             </p>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
               {[
-                { name: "Google", color: "#4285f4" },
+                { name: "TechPoint Africa", color: "#0066ff" },
                 { name: "Paystack", color: "#011B33" },
-                { name: "Microsoft", color: "#00a4ef" },
-                { name: "Vital Relief Wellness", color: "#2e7d32" },
-                { name: "Bolt", color: "#34d186" },
-                { name: "Glovo", color: "#f9a825" },
+                { name: "Moniepoint", color: "#00A86B" },
+                { name: "Boomplay", color: "#e02020" },
                 { name: "Flutterwave", color: "#f5a623" },
-                { name: "Thuja", color: "#7c3aed" },
-                { name: "Interswitch", color: "#e02020" },
-                { name: "Konga", color: "#f97316" },
+                { name: "GTBank", color: "#f97316" },
+                { name: "Audiomack", color: "#f9ba48" },
+                { name: "Zikoko Media", color: "#7c3aed" },
+                { name: "Ndani TV", color: "#163d3a" },
+                { name: "Glovo", color: "#f9a825" },
               ].map((c) => (
                 <div
                   key={c.name}
@@ -597,17 +582,10 @@ export default function UIUXDesignPage() {
 
               {/* LEFT */}
               <div className="relative bg-gradient-to-br from-[#163d3a] via-[#1d5450] to-[#266D67] flex flex-col justify-center px-8 sm:px-12 py-12 lg:py-16">
-                <div
-                  className="absolute inset-0 opacity-[0.05]"
-                  style={{
-                    backgroundImage: "radial-gradient(circle, rgba(255,255,255,0.9) 1px, transparent 1px)",
-                    backgroundSize: "22px 22px",
-                  }}
-                />
-                <div
-                  className="absolute bottom-0 left-0 w-64 h-64 opacity-20 blur-3xl"
-                  style={{ background: "radial-gradient(circle, #f9ba48 0%, transparent 70%)" }}
-                />
+                <div className="absolute inset-0 opacity-[0.05]"
+                  style={{ backgroundImage: "radial-gradient(circle, rgba(255,255,255,0.9) 1px, transparent 1px)", backgroundSize: "22px 22px" }} />
+                <div className="absolute bottom-0 left-0 w-64 h-64 opacity-20 blur-3xl"
+                  style={{ background: "radial-gradient(circle, #f9ba48 0%, transparent 70%)" }} />
 
                 <div className="relative z-10 max-w-md">
                   <span className="inline-flex items-center gap-2 px-3 py-1.5 bg-white/10 border border-white/20 rounded-full text-white/80 text-xs font-semibold font-[Montserrat] mb-5">
@@ -622,15 +600,15 @@ export default function UIUXDesignPage() {
                     <span className="text-[#f9ba48]">Your Back</span>
                   </h2>
                   <p className="text-white/65 font-[Montserrat] text-base leading-relaxed mb-8">
-                    From application to graduation, our team supports you every step of the way — so you never feel alone on your journey.
+                    From your first CapCut cut to your first paid client — our team and community support you every step of the way.
                   </p>
 
                   <ul className="space-y-3 mb-10">
                     {[
                       "Dedicated mentor for the full 10 weeks",
-                      "Missed a session? Every class is recorded",
-                      "Peer community of 3,120+ designers",
-                      "Career coaching until you land the job",
+                      "Missed a class? Every session is recorded",
+                      "Community of 1,400+ creators across Africa",
+                      "Freelance support until you land your first client",
                     ].map((item) => (
                       <li key={item} className="flex items-start gap-2.5">
                         <CheckCircle className="w-4 h-4 text-[#f9ba48] shrink-0 mt-0.5" />
@@ -649,7 +627,7 @@ export default function UIUXDesignPage() {
                 </div>
               </div>
 
-              {/* RIGHT — Mentorship image */}
+              {/* RIGHT — image */}
               <div className="relative min-h-[320px] lg:min-h-0">
                 <Image
                   src="/IdealTeam.png"
@@ -680,16 +658,16 @@ export default function UIUXDesignPage() {
                   Course Curriculum
                 </span>
                 <h2 className="font-[Montserrat] font-bold text-3xl sm:text-4xl text-[#163d3a] leading-tight mb-4">
-                  9 Modules.<br />
+                  10 Modules.<br />
                   <span className="text-[#266D67]">One Career.</span>
                 </h2>
                 <p className="text-gray-500 font-[Montserrat] font-light leading-relaxed mb-8">
-                  A structured, project-led journey from complete beginner to job-ready UI/UX designer — in just 10 weeks.
+                  A structured journey from complete beginner to professional video editor — covering mobile, PC, AI, and freelance strategy.
                 </p>
 
                 <div className="bg-[#163d3a] rounded-2xl p-6 space-y-4">
                   {[
-                    { icon: <Layers className="w-4 h-4" />, label: "9 Core Modules" },
+                    { icon: <Layers className="w-4 h-4" />, label: "10 Core Modules" },
                     { icon: <Clock className="w-4 h-4" />, label: "8–10 Weeks" },
                     { icon: <Users className="w-4 h-4" />, label: "Live + Recorded Sessions" },
                     { icon: <Award className="w-4 h-4" />, label: "Professional Certification" },
@@ -754,7 +732,7 @@ export default function UIUXDesignPage() {
         </section>
 
         {/* ══════════════════════════════════════════
-            6. UNIQUENESS — What Makes Us Different
+            6. WHAT MAKES US DIFFERENT
         ══════════════════════════════════════════ */}
         <section className="section-padding bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -770,31 +748,31 @@ export default function UIUXDesignPage() {
                   <span className="text-[#266D67]">Us Different</span>
                 </h2>
                 <p className="text-gray-500 font-[Montserrat] font-light text-lg leading-relaxed">
-                  Every element of this diploma is designed to move you from learner to employed — not just from beginner to certified.
+                  Every module in this programme is built to produce editors who work fast, earn well, and never stop improving.
                 </p>
               </div>
 
               <div className="grid sm:grid-cols-2 gap-4">
                 {[
                   {
-                    icon: <Users className="w-6 h-6" />,
-                    title: "Cohort-Based Learning",
-                    desc: "You learn alongside real peers in structured cohorts — not alone. Peer reviews, live collaboration, and shared accountability keep you motivated and on track.",
+                    icon: <Video className="w-6 h-6" />,
+                    title: "Mobile + Desktop in One",
+                    desc: "Most video courses pick one platform. We cover both — because clients and employers need editors who can produce polished content on a phone and a workstation equally well.",
                   },
                   {
                     icon: <Brain className="w-6 h-6" />,
-                    title: "AI-Integrated Curriculum",
-                    desc: "AI tools aren't an afterthought — they're embedded in every module from day one. You graduate fluent in AI-powered design workflows before most designers even start learning.",
-                  },
-                  {
-                    icon: <Palette className="w-6 h-6" />,
-                    title: "Portfolio from Week One",
-                    desc: "You start building your portfolio in the very first module — not the last. By graduation you'll have 5+ polished case studies reviewed and refined with direct mentor feedback.",
+                    title: "AI-Powered Workflow",
+                    desc: "AI tools for auto-captions, scene detection, voice cleanup, and script generation are embedded in the curriculum — so you graduate faster and more output-capable than any editor who trained without them.",
                   },
                   {
                     icon: <Target className="w-6 h-6" />,
-                    title: "Africa-Centred Briefs",
-                    desc: "Every project brief and case study is rooted in African market realities — products, brands, and problems your future employers will immediately recognise and respect.",
+                    title: "Real Client Briefs",
+                    desc: "Every project in the programme mirrors real briefs from African brands and content agencies — the exact type of work you'll be paid to produce within weeks of graduating.",
+                  },
+                  {
+                    icon: <TrendingUp className="w-6 h-6" />,
+                    title: "Freelance Business Skills",
+                    desc: "Technical skills alone won't build a career. We teach pricing, client management, portfolio strategy, and platform optimisation so you can earn from your editing skills from day one.",
                   },
                 ].map((u, i) => (
                   <div
@@ -820,18 +798,10 @@ export default function UIUXDesignPage() {
           className="section-padding relative overflow-hidden"
           style={{ background: "linear-gradient(135deg, #163d3a 0%, #1d5450 40%, #266D67 100%)" }}
         >
-          <div
-            className="absolute inset-0 opacity-[0.05]"
-            style={{
-              backgroundImage:
-                "linear-gradient(rgba(255,255,255,0.8) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.8) 1px, transparent 1px)",
-              backgroundSize: "40px 40px",
-            }}
-          />
-          <div
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] opacity-15 blur-3xl rounded-full"
-            style={{ background: "radial-gradient(circle, #f9ba48 0%, transparent 65%)" }}
-          />
+          <div className="absolute inset-0 opacity-[0.05]"
+            style={{ backgroundImage: "linear-gradient(rgba(255,255,255,0.8) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.8) 1px, transparent 1px)", backgroundSize: "40px 40px" }} />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] opacity-15 blur-3xl rounded-full"
+            style={{ background: "radial-gradient(circle, #f9ba48 0%, transparent 65%)" }} />
 
           <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 text-center">
             <span className="inline-flex items-center gap-2 px-3 py-1.5 bg-white/10 border border-white/20 rounded-full text-white/80 text-xs font-semibold font-[Montserrat] mb-6">
@@ -842,11 +812,11 @@ export default function UIUXDesignPage() {
               className="font-[Montserrat] font-bold text-white leading-tight mb-5"
               style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)" }}
             >
-              Your Career in Design<br />
+              Your Career in Video<br />
               <span className="text-[#f9ba48]">Starts With One Click</span>
             </h2>
             <p className="text-white/65 font-[Montserrat] text-lg leading-relaxed mb-10 max-w-xl mx-auto">
-              Start your journey today and join Africa&apos;s leading design community — where learners become professionals.
+              Join 1,400+ creators who turned their love of video into a professional skill — and started earning from it.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Link
@@ -857,7 +827,7 @@ export default function UIUXDesignPage() {
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
               <a
-                href="mailto:hello@idealnovate.com?subject=UI%2FUX%20Design%20Diploma%20Enquiry"
+                href="mailto:hello@idealnovate.com?subject=Video%20Editing%20Diploma%20Enquiry"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-white/25 text-white font-semibold rounded-lg hover:bg-white/10 transition-all font-[Montserrat] text-sm"
               >
                 <MessageSquare className="w-4 h-4" />
@@ -882,36 +852,36 @@ export default function UIUXDesignPage() {
                 <span className="text-[#266D67]"> Start Date</span>
               </h2>
               <p className="mt-4 text-gray-500 font-[Montserrat] font-light text-lg">
-                Choose the cohort that works best for your schedule — all seats are limited.
+                Choose the cohort that fits your schedule — all seats are limited and fill up quickly.
               </p>
             </div>
 
             <div className="grid md:grid-cols-3 gap-6">
               {[
                 {
-                  month: "Jun",
+                  month: "Jul",
                   year: "2026",
-                  fullDate: "Starts June 20, 2026",
+                  fullDate: "Starts July 18, 2026",
                   status: "Filling Fast",
                   statusColor: "#f9ba48",
                   accent: "#f9ba48",
-                  spots: "12 seats left",
+                  spots: "10 seats left",
                   highlight: true,
                 },
                 {
-                  month: "Aug",
+                  month: "Sep",
                   year: "2026",
-                  fullDate: "Starts August 22, 2026",
+                  fullDate: "Starts September 19, 2026",
                   status: "Open",
                   statusColor: "#266D67",
                   accent: "#266D67",
-                  spots: "24 seats left",
+                  spots: "22 seats left",
                   highlight: false,
                 },
                 {
-                  month: "Oct",
+                  month: "Nov",
                   year: "2026",
-                  fullDate: "Starts October 24, 2026",
+                  fullDate: "Starts November 14, 2026",
                   status: "Open",
                   statusColor: "#266D67",
                   accent: "#163d3a",
@@ -928,62 +898,37 @@ export default function UIUXDesignPage() {
                   }`}
                 >
                   {cohort.highlight && (
-                    <div
-                      className="absolute top-0 left-0 right-0 h-1"
-                      style={{ background: `linear-gradient(90deg, ${cohort.accent}, #266D67)` }}
-                    />
+                    <div className="absolute top-0 left-0 right-0 h-1"
+                      style={{ background: `linear-gradient(90deg, ${cohort.accent}, #266D67)` }} />
                   )}
 
                   <div className="p-8">
                     <div className="flex items-start justify-between mb-6">
-                      <div
-                        className="w-12 h-12 rounded-2xl flex items-center justify-center"
-                        style={{ background: cohort.highlight ? "rgba(249,186,72,0.15)" : "#eef6f5" }}
-                      >
+                      <div className="w-12 h-12 rounded-2xl flex items-center justify-center"
+                        style={{ background: cohort.highlight ? "rgba(249,186,72,0.15)" : "#eef6f5" }}>
                         <Calendar className="w-6 h-6" style={{ color: cohort.accent }} />
                       </div>
-                      <span
-                        className="px-3 py-1 rounded-full text-xs font-bold font-[Montserrat]"
-                        style={{ background: `${cohort.statusColor}20`, color: cohort.statusColor }}
-                      >
+                      <span className="px-3 py-1 rounded-full text-xs font-bold font-[Montserrat]"
+                        style={{ background: `${cohort.statusColor}20`, color: cohort.statusColor }}>
                         {cohort.status}
                       </span>
                     </div>
 
-                    <p
-                      className={`font-[Montserrat] text-6xl font-bold leading-none mb-1 ${
-                        cohort.highlight ? "text-[#f9ba48]" : "text-[#163d3a]"
-                      }`}
-                    >
+                    <p className={`font-[Montserrat] text-6xl font-bold leading-none mb-1 ${cohort.highlight ? "text-[#f9ba48]" : "text-[#163d3a]"}`}>
                       {cohort.month}
                     </p>
-                    <p
-                      className={`font-[Montserrat] font-semibold text-base mb-4 ${
-                        cohort.highlight ? "text-white/40" : "text-gray-400"
-                      }`}
-                    >
+                    <p className={`font-[Montserrat] font-semibold text-base mb-4 ${cohort.highlight ? "text-white/40" : "text-gray-400"}`}>
                       {cohort.year}
                     </p>
 
-                    <div
-                      className={`flex items-center gap-2 px-3 py-2 rounded-lg mb-6 text-xs font-[Montserrat] font-medium ${
-                        cohort.highlight ? "bg-white/8 text-white/60" : "bg-white text-gray-500"
-                      }`}
-                    >
+                    <div className={`flex items-center gap-2 px-3 py-2 rounded-lg mb-6 text-xs font-[Montserrat] font-medium ${cohort.highlight ? "bg-white/8 text-white/60" : "bg-white text-gray-500"}`}>
                       <Clock className="w-3.5 h-3.5" />
                       {cohort.fullDate}
                     </div>
 
                     <div className="flex items-center gap-2 mb-7">
-                      <div
-                        className="w-2 h-2 rounded-full animate-pulse"
-                        style={{ background: cohort.statusColor }}
-                      />
-                      <span
-                        className={`text-xs font-[Montserrat] font-semibold ${
-                          cohort.highlight ? "text-white/70" : "text-gray-500"
-                        }`}
-                      >
+                      <div className="w-2 h-2 rounded-full animate-pulse" style={{ background: cohort.statusColor }} />
+                      <span className={`text-xs font-[Montserrat] font-semibold ${cohort.highlight ? "text-white/70" : "text-gray-500"}`}>
                         {cohort.spots}
                       </span>
                     </div>
@@ -1009,24 +954,23 @@ export default function UIUXDesignPage() {
         <section className="section-padding bg-[#f4f9f8]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-3 gap-10 lg:gap-16 items-start">
-              {/* Left sticky */}
               <div className="lg:sticky lg:top-32">
                 <span className="inline-flex items-center gap-2 px-4 py-2 bg-[#eef6f5] text-[#266D67] text-sm font-semibold rounded-full mb-4 font-[Montserrat]">
                   <Star className="w-3.5 h-3.5" fill="currentColor" />
                   Student Stories
                 </span>
                 <h2 className="font-[Montserrat] font-bold text-3xl sm:text-4xl text-[#163d3a] leading-tight mb-4">
-                  Real Designers.<br />
+                  Real Editors.<br />
                   <span className="text-[#266D67]">Real Results.</span>
                 </h2>
                 <p className="text-gray-500 font-[Montserrat] font-light leading-relaxed mb-8">
-                  Graduates who went from zero to employed — with portfolios, offers, and promotions to prove it.
+                  Graduates who went from zero to professional — with client projects, income, and social audiences to prove it.
                 </p>
                 <div className="space-y-4">
                   {[
-                    { value: "4.8★", label: "Average diploma rating" },
-                    { value: "3,120+", label: "UI/UX graduates across Africa" },
-                    { value: "94%", label: "Employed within 6 months" },
+                    { value: "4.7★", label: "Average diploma rating" },
+                    { value: "1,400+", label: "Video editors across Africa" },
+                    { value: "87%", label: "Employed or freelancing within 6 months" },
                   ].map((s) => (
                     <div key={s.label} className="flex items-center gap-4">
                       <p className="font-[Montserrat] font-bold text-[#266D67] text-2xl w-20 shrink-0">{s.value}</p>
@@ -1036,7 +980,6 @@ export default function UIUXDesignPage() {
                 </div>
               </div>
 
-              {/* Right: review cards */}
               <div className="lg:col-span-2 grid sm:grid-cols-2 gap-4">
                 {testimonials.map((t) => (
                   <div
@@ -1048,9 +991,7 @@ export default function UIUXDesignPage() {
                         <Star key={i} className="w-4 h-4 text-[#f9ba48]" fill="currentColor" />
                       ))}
                     </div>
-                    <p className="font-[Montserrat] text-[#163d3a] text-sm leading-relaxed mb-5">
-                      &ldquo;{t.text}&rdquo;
-                    </p>
+                    <p className="font-[Montserrat] text-[#163d3a] text-sm leading-relaxed mb-5">&ldquo;{t.text}&rdquo;</p>
                     <div className="flex items-center gap-3 pt-4 border-t border-gray-100">
                       <div
                         className="w-10 h-10 rounded-full flex items-center justify-center font-bold text-white text-xs font-[Montserrat] shrink-0 ring-2 ring-white shadow-sm"
@@ -1085,7 +1026,7 @@ export default function UIUXDesignPage() {
                 <span className="text-[#266D67]"> Payment Options</span>
               </h2>
               <p className="mt-4 text-gray-500 font-[Montserrat] font-light text-lg">
-                Financial barriers shouldn&apos;t stop great talent. Choose the plan that works for you.
+                Financial barriers shouldn&apos;t stop great creators. Choose the plan that works for you.
               </p>
             </div>
 
@@ -1149,61 +1090,32 @@ export default function UIUXDesignPage() {
                   }`}
                 >
                   {plan.popular && (
-                    <div
-                      className="absolute top-0 left-0 right-0 h-1"
-                      style={{ background: "linear-gradient(90deg, #f9ba48, #266D67)" }}
-                    />
+                    <div className="absolute top-0 left-0 right-0 h-1"
+                      style={{ background: "linear-gradient(90deg, #f9ba48, #266D67)" }} />
                   )}
                   <div className="p-8">
                     <div className="flex items-center justify-between mb-6">
-                      <div
-                        className={`w-12 h-12 rounded-xl flex items-center justify-center ${
-                          plan.popular ? "bg-[#f9ba48]/15 text-[#f9ba48]" : "bg-[#eef6f5] text-[#266D67]"
-                        }`}
-                      >
+                      <div className={`w-12 h-12 rounded-xl flex items-center justify-center ${plan.popular ? "bg-[#f9ba48]/15 text-[#f9ba48]" : "bg-[#eef6f5] text-[#266D67]"}`}>
                         {plan.icon}
                       </div>
-                      <span
-                        className="px-3 py-1 rounded-full text-xs font-bold font-[Montserrat]"
-                        style={{ background: `${plan.tagColor}20`, color: plan.tagColor }}
-                      >
+                      <span className="px-3 py-1 rounded-full text-xs font-bold font-[Montserrat]"
+                        style={{ background: `${plan.tagColor}20`, color: plan.tagColor }}>
                         {plan.tag}
                       </span>
                     </div>
-                    <h3
-                      className={`font-[Montserrat] font-bold text-xl mb-1 ${
-                        plan.popular ? "text-white" : "text-[#163d3a]"
-                      }`}
-                    >
+                    <h3 className={`font-[Montserrat] font-bold text-xl mb-1 ${plan.popular ? "text-white" : "text-[#163d3a]"}`}>
                       {plan.title}
                     </h3>
-                    <p
-                      className={`text-sm font-[Montserrat] mb-5 ${
-                        plan.popular ? "text-white/50" : "text-gray-400"
-                      }`}
-                    >
+                    <p className={`text-sm font-[Montserrat] mb-5 ${plan.popular ? "text-white/50" : "text-gray-400"}`}>
                       {plan.sub}
                     </p>
-                    <p
-                      className={`font-[Montserrat] font-bold text-3xl mb-7 ${
-                        plan.popular ? "text-[#f9ba48]" : "text-[#163d3a]"
-                      }`}
-                    >
+                    <p className={`font-[Montserrat] font-bold text-3xl mb-7 ${plan.popular ? "text-[#f9ba48]" : "text-[#163d3a]"}`}>
                       {plan.price}
                     </p>
                     <ul className="space-y-3 mb-8">
                       {plan.perks.map((p) => (
-                        <li
-                          key={p}
-                          className={`flex items-start gap-2.5 text-sm font-[Montserrat] ${
-                            plan.popular ? "text-white/75" : "text-gray-600"
-                          }`}
-                        >
-                          <CheckCircle
-                            className={`w-4 h-4 mt-0.5 shrink-0 ${
-                              plan.popular ? "text-[#f9ba48]" : "text-[#266D67]"
-                            }`}
-                          />
+                        <li key={p} className={`flex items-start gap-2.5 text-sm font-[Montserrat] ${plan.popular ? "text-white/75" : "text-gray-600"}`}>
+                          <CheckCircle className={`w-4 h-4 mt-0.5 shrink-0 ${plan.popular ? "text-[#f9ba48]" : "text-[#266D67]"}`} />
                           {p}
                         </li>
                       ))}
@@ -1211,9 +1123,7 @@ export default function UIUXDesignPage() {
                     <Link
                       href="/company/scholarships"
                       className={`flex items-center justify-center gap-2 w-full py-3.5 rounded-xl font-bold text-sm font-[Montserrat] transition-all ${
-                        plan.popular
-                          ? "bg-[#f9ba48] text-white hover:bg-[#d4a030]"
-                          : "bg-[#163d3a] text-white hover:bg-[#266D67]"
+                        plan.popular ? "bg-[#f9ba48] text-white hover:bg-[#d4a030]" : "bg-[#163d3a] text-white hover:bg-[#266D67]"
                       }`}
                     >
                       {plan.cta}
@@ -1226,10 +1136,10 @@ export default function UIUXDesignPage() {
 
             <p className="text-center text-gray-400 text-sm font-[Montserrat]">
               Tuition rates are available upon request — we accept multiple currencies across Africa and beyond.{" "}
-              <a href="mailto:hello@idealnovate.com?subject=Tuition%20Enquiry%20%E2%80%93%20UI%2FUX%20Design%20Diploma" className="text-[#266D67] font-semibold hover:underline">
+              <a href="mailto:hello@idealnovate.com?subject=Tuition%20Enquiry%20%E2%80%93%20Video%20Editing%20Diploma" className="text-[#266D67] font-semibold hover:underline">
                 Contact admissions
               </a>{" "}
-              to get the full pricing details and explore your options.
+              to get full pricing details and explore your options.
             </p>
           </div>
         </section>
@@ -1249,7 +1159,7 @@ export default function UIUXDesignPage() {
                 <span className="text-[#266D67]"> Simple</span>
               </h2>
               <p className="mt-4 text-gray-500 font-[Montserrat] font-light text-lg">
-                Four straightforward steps stand between you and the start of your design career.
+                Four simple steps between you and the start of your video editing career.
               </p>
             </div>
 
@@ -1259,25 +1169,25 @@ export default function UIUXDesignPage() {
                   step: "01",
                   icon: <Search className="w-6 h-6" />,
                   title: "Explore the Programme",
-                  desc: "Read through the curriculum, payment options, and cohort dates. Attend a free info session or reach out to an advisor with any questions.",
+                  desc: "Review the curriculum, cohort dates, and payment options. Attend a free info session or reach out directly with any questions — our team responds within 24 hours.",
                 },
                 {
                   step: "02",
                   icon: <Briefcase className="w-6 h-6" />,
                   title: "Submit Your Application",
-                  desc: "Complete our short application form. No essays, no prior experience needed — just tell us a little about yourself and your goals.",
+                  desc: "Complete our short application form — no portfolio or experience required. Just tell us about yourself, your device setup, and what you want to create.",
                 },
                 {
                   step: "03",
                   icon: <MessageSquare className="w-6 h-6" />,
                   title: "Talk with Admissions",
-                  desc: "A member of our admissions team will reach out within 48 hours to answer your questions, discuss scholarship eligibility, and confirm your fit.",
+                  desc: "Our admissions team will contact you within 48 hours — answer your questions, assess scholarship eligibility, and confirm your cohort placement.",
                 },
                 {
                   step: "04",
                   icon: <GraduationCap className="w-6 h-6" />,
                   title: "Enrol & Secure Your Seat",
-                  desc: "Complete your registration, secure your cohort seat, and get access to your pre-programme welcome kit. Day one starts here.",
+                  desc: "Complete registration, confirm your cohort seat, and receive access to your pre-programme welcome kit — including device setup guides. Day one begins here.",
                 },
               ].map((s, i) => (
                 <div key={i} className="group bg-white rounded-3xl p-7 border border-[#e2efee] hover:border-[#266D67]/30 hover:shadow-xl hover:shadow-[#266D67]/8 transition-all duration-300 hover:-translate-y-1 h-full">
@@ -1322,15 +1232,15 @@ export default function UIUXDesignPage() {
                   <span className="text-[#266D67]"> Asked</span>
                 </h2>
                 <p className="text-gray-500 font-[Montserrat] font-light leading-relaxed mb-8">
-                  Everything you need to know about the UI/UX Design Diploma before applying.
+                  Everything you need to know about the Video Editing Diploma before applying.
                 </p>
                 <div className="bg-[#163d3a] rounded-2xl p-6">
                   <p className="font-[Montserrat] font-bold text-white text-sm mb-2">Still have questions?</p>
                   <p className="text-white/60 text-xs font-[Montserrat] mb-4">
-                    Our admissions team is happy to help you make the right decision.
+                    Our admissions team is happy to help — reach out anytime.
                   </p>
                   <a
-                    href="mailto:hello@idealnovate.com?subject=UI%2FUX%20Diploma%20Question"
+                    href="mailto:hello@idealnovate.com?subject=Video%20Editing%20Diploma%20Question"
                     className="block text-center py-2.5 bg-[#f9ba48] text-white font-bold text-xs rounded-lg hover:bg-[#d4a030] transition-all font-[Montserrat]"
                   >
                     Email Admissions
@@ -1352,24 +1262,14 @@ export default function UIUXDesignPage() {
                       className="w-full flex items-center justify-between gap-4 p-5 text-left"
                       onClick={() => setOpenFaq(openFaq === i ? null : i)}
                     >
-                      <span className="font-[Montserrat] font-bold text-[#163d3a] text-sm leading-snug">
-                        {faq.q}
-                      </span>
+                      <span className="font-[Montserrat] font-bold text-[#163d3a] text-sm leading-snug">{faq.q}</span>
                       <ChevronDown
-                        className={`w-5 h-5 text-[#266D67] shrink-0 transition-transform duration-200 ${
-                          openFaq === i ? "rotate-180" : ""
-                        }`}
+                        className={`w-5 h-5 text-[#266D67] shrink-0 transition-transform duration-200 ${openFaq === i ? "rotate-180" : ""}`}
                       />
                     </button>
-                    <div
-                      className={`overflow-hidden transition-all duration-200 ${
-                        openFaq === i ? "max-h-[400px]" : "max-h-0"
-                      }`}
-                    >
+                    <div className={`overflow-hidden transition-all duration-200 ${openFaq === i ? "max-h-[400px]" : "max-h-0"}`}>
                       <div className="px-5 pb-5">
-                        <p className="text-gray-500 text-sm font-[Montserrat] font-light leading-relaxed">
-                          {faq.a}
-                        </p>
+                        <p className="text-gray-500 text-sm font-[Montserrat] font-light leading-relaxed">{faq.a}</p>
                       </div>
                     </div>
                   </div>
@@ -1383,21 +1283,10 @@ export default function UIUXDesignPage() {
             13. FINAL CTA
         ══════════════════════════════════════════ */}
         <section className="section-padding bg-[#163d3a] relative overflow-hidden">
-          <div
-            className="absolute inset-0 opacity-[0.05]"
-            style={{
-              backgroundImage:
-                "linear-gradient(rgba(255,255,255,0.8) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.8) 1px, transparent 1px)",
-              backgroundSize: "32px 32px",
-            }}
-          />
-          <div
-            className="absolute inset-0 opacity-15"
-            style={{
-              backgroundImage:
-                "radial-gradient(circle at 20% 50%, #f9ba48 0%, transparent 45%), radial-gradient(circle at 80% 50%, #266D67 0%, transparent 45%)",
-            }}
-          />
+          <div className="absolute inset-0 opacity-[0.05]"
+            style={{ backgroundImage: "linear-gradient(rgba(255,255,255,0.8) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.8) 1px, transparent 1px)", backgroundSize: "32px 32px" }} />
+          <div className="absolute inset-0 opacity-15"
+            style={{ backgroundImage: "radial-gradient(circle at 20% 50%, #f9ba48 0%, transparent 45%), radial-gradient(circle at 80% 50%, #266D67 0%, transparent 45%)" }} />
 
           <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center">
             <span className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#f9ba48]/20 border border-[#f9ba48]/30 rounded-full text-xs font-semibold text-[#f9ba48] mb-6 font-[Montserrat]">
@@ -1405,11 +1294,11 @@ export default function UIUXDesignPage() {
               Next Cohort Filling Up
             </span>
             <h2 className="font-[Montserrat] font-bold text-white text-3xl sm:text-4xl lg:text-5xl leading-tight mb-5">
-              Your Future as a Designer<br />
+              Your Future as a Video Editor<br />
               <span className="text-[#f9ba48]">Begins Right Now</span>
             </h2>
             <p className="font-[Montserrat] text-white/60 text-lg mb-10 max-w-xl mx-auto">
-              Over 3,120 designers have taken this step. The only question is — are you next?
+              Over 1,400 creators have taken this step. The only question is — are you next?
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Link
@@ -1420,7 +1309,7 @@ export default function UIUXDesignPage() {
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
               <a
-                href="mailto:hello@idealnovate.com?subject=Admissions%20Enquiry%20%E2%80%93%20UI%2FUX%20Design%20Diploma"
+                href="mailto:hello@idealnovate.com?subject=Admissions%20Enquiry%20%E2%80%93%20Video%20Editing%20Diploma"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all font-[Montserrat] text-sm"
               >
                 <MessageSquare className="w-4 h-4" />

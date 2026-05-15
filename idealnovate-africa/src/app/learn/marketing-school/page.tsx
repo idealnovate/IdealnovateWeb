@@ -7,7 +7,8 @@ import Footer from "@/components/Footer";
 import {
   ArrowRight, Star, Users, Clock, CheckCircle, ChevronDown,
   Megaphone, Globe, BarChart3, Cpu, Zap, BookOpen, Award,
-  Target, TrendingUp, Layers, Monitor, MessageSquare,
+  Target, TrendingUp, Layers, Monitor, MessageSquare, Video,
+  ShoppingBag, Laptop, Headphones, Smartphone, Package,
 } from "lucide-react";
 import { useState } from "react";
 
@@ -85,7 +86,7 @@ const programmes = [
     icon: <Cpu className="w-6 h-6" />,
     tag: "Marketing School",
     tagColor: "#163d3a",
-    title: "Content Marketing Strategy with AI",
+    title: "Content Creation & AI",
     description: "Build and execute a content strategy that attracts, nurtures, and converts audiences — supercharged with AI tools for creation and distribution.",
     duration: "6 Weeks",
     students: "940",
@@ -95,6 +96,22 @@ const programmes = [
     hot: true,
     href: "/learn/marketing-school/content-marketing",
     color: "#266D67",
+  },
+  {
+    id: 3,
+    icon: <Video className="w-6 h-6" />,
+    tag: "Marketing School",
+    tagColor: "#163d3a",
+    title: "Video Editing (Mobile & PC)",
+    description: "Master video editing on your phone and desktop — from CapCut and InShot to DaVinci Resolve. Build a showreel, grow an audience, and earn from your craft.",
+    duration: "10 Weeks",
+    students: "1,400",
+    rating: "4.7",
+    level: "Beginner",
+    price: "Scholarship Available",
+    hot: true,
+    href: "/learn/marketing-school/video-editing",
+    color: "#163d3a",
   },
 ];
 
@@ -219,7 +236,7 @@ const faqs = [
     a: "Yes — that's a core part of the experience. Under mentor supervision, you'll set up and run real campaigns (with a test budget), analyse the results, and iterate. By the end, you'll have live campaign data in your portfolio.",
   },
   {
-    q: "How is Content Marketing Strategy with AI different from a standard content course?",
+    q: "How is Content Creation & AI different from a standard content course?",
     a: "Traditional content courses teach writing and planning. Ours goes further — you'll also learn how to use AI tools to produce content at scale, analyse performance data, and build a distribution strategy that compounds over time.",
   },
   {
@@ -309,11 +326,12 @@ export default function MarketingSchoolPage() {
                 </div>
               </div>
 
-              {/* Top programmes mini cards — 2 programmes */}
-              <div className="grid grid-cols-2 gap-4 text-left max-w-2xl mx-auto">
+              {/* Top programmes mini cards — 3 programmes */}
+              <div className="grid grid-cols-3 gap-3 text-left max-w-3xl mx-auto">
                 {[
                   { icon: <Megaphone className="w-4 h-4" />, title: "Digital Advertising & Media Buying", students: "2,260", rating: "4.7", weeks: "3 Wks", color: "#163d3a", hot: true, href: "/learn/marketing-school/digital-advertising" },
-                  { icon: <Cpu className="w-4 h-4" />, title: "Content Marketing Strategy with AI", students: "940", rating: "4.9", weeks: "6 Wks", color: "#266D67", hot: true, href: "/learn/marketing-school/content-marketing" },
+                  { icon: <Cpu className="w-4 h-4" />, title: "Content Creation & AI", students: "940", rating: "4.9", weeks: "6 Wks", color: "#266D67", hot: true, href: "/learn/marketing-school/content-marketing" },
+                  { icon: <Video className="w-4 h-4" />, title: "Video Editing (Mobile & PC)", students: "1,400", rating: "4.7", weeks: "10 Wks", color: "#f9ba48", hot: true, href: "/learn/marketing-school/video-editing" },
                 ].map((p) => (
                   <Link key={p.title} href={p.href} className="bg-white/6 border border-white/10 rounded-2xl overflow-hidden flex flex-col hover:bg-white/10 hover:border-white/20 transition-all duration-200">
                     <div className="h-1 w-full" style={{ background: p.color }} />
@@ -464,7 +482,7 @@ export default function MarketingSchoolPage() {
               </p>
             </div>
 
-            <div className="grid sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {programmes.map(prog => (
                 <Link key={prog.id} href={prog.href}
                   className="group bg-white rounded-2xl overflow-hidden border border-gray-100 hover:border-[#266D67]/20 hover:shadow-xl hover:shadow-[#266D67]/8 transition-all duration-300 hover:-translate-y-1 flex flex-col">
@@ -496,8 +514,8 @@ export default function MarketingSchoolPage() {
               ))}
             </div>
 
-            {/* More coming soon notice */}
-            <div className="mt-8 text-center py-8 border border-dashed border-[#e2efee] rounded-2xl bg-[#f4f9f8]">
+            {/* Coming soon teaser */}
+            <div className="mt-8 text-center py-6 border border-dashed border-[#e2efee] rounded-2xl bg-[#f4f9f8]">
               <p className="font-[Montserrat] font-semibold text-[#163d3a] text-sm mb-1">More programmes coming soon</p>
               <p className="text-gray-400 text-xs font-[Montserrat]">SEO Strategy, Email Marketing Mastery, Social Media Growth, and more — currently in development.</p>
             </div>
@@ -731,6 +749,93 @@ export default function MarketingSchoolPage() {
                     </div>
                   </div>
                 ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ══════════════════════════════════════════
+            MARKETPLACE CTA
+        ══════════════════════════════════════════ */}
+        <section className="bg-[#f4f9f8] py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="relative rounded-3xl overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-[#163d3a] via-[#1a4a46] to-[#266D67]" />
+              <div className="absolute inset-0 opacity-[0.04]"
+                style={{ backgroundImage: "radial-gradient(circle, rgba(255,255,255,0.9) 1px, transparent 1px)", backgroundSize: "22px 22px" }} />
+              <div className="absolute -top-24 -right-24 w-96 h-96 opacity-25 blur-3xl rounded-full"
+                style={{ background: "radial-gradient(circle, #f9ba48 0%, transparent 65%)" }} />
+              <div className="absolute bottom-0 left-1/4 w-72 h-72 opacity-15 blur-3xl rounded-full"
+                style={{ background: "radial-gradient(circle, #266D67 0%, transparent 65%)" }} />
+
+              <div className="relative z-10 grid lg:grid-cols-2 items-stretch">
+
+                <div className="flex flex-col justify-center px-8 sm:px-10 lg:px-14 py-12 lg:py-14 border-b lg:border-b-0 lg:border-r border-white/10">
+                  <span className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#f9ba48]/20 border border-[#f9ba48]/30 rounded-full text-[#f9ba48] text-xs font-bold font-[Montserrat] mb-5 self-start uppercase tracking-wider">
+                    <ShoppingBag className="w-3.5 h-3.5" />
+                    Idealnovate Marketplace
+                  </span>
+                  <h2 className="font-[Montserrat] font-bold text-white leading-tight mb-4"
+                    style={{ fontSize: "clamp(1.7rem, 3vw, 2.5rem)" }}>
+                    Gear Up for Your
+                    <br />
+                    <span className="text-[#f9ba48]">Tech Journey</span>
+                  </h2>
+                  <p className="text-white/55 font-[Montserrat] text-sm sm:text-base leading-relaxed mb-8 max-w-sm">
+                    Shop curated tech gadgets — laptops, headphones, monitors and accessories — handpicked for learners and creators like you.
+                  </p>
+                  <Link
+                    href="/marketplace"
+                    className="group self-start inline-flex items-center gap-2 px-6 py-3.5 bg-[#f9ba48] text-white font-bold text-sm rounded-xl hover:bg-[#d4a030] transition-all duration-200 shadow-xl shadow-[#f9ba48]/20 font-[Montserrat]"
+                  >
+                    <ShoppingBag className="w-4 h-4" />
+                    Browse the Marketplace
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </Link>
+                  <div className="flex flex-wrap items-center gap-5 mt-6">
+                    {["Free delivery", "Verified sellers", "Secure checkout"].map((f) => (
+                      <span key={f} className="flex items-center gap-1.5 text-white/35 text-[10px] font-[Montserrat]">
+                        <CheckCircle className="w-3 h-3 text-[#f9ba48]/60 shrink-0" />
+                        {f}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="px-8 sm:px-10 lg:px-12 py-10 lg:py-14 flex flex-col justify-center">
+                  <p className="text-white/30 text-[10px] font-[Montserrat] font-semibold uppercase tracking-widest mb-5">
+                    Shop by category
+                  </p>
+                  <div className="grid grid-cols-3 gap-3">
+                    {[
+                      { icon: <Laptop className="w-5 h-5" />, label: "Laptops" },
+                      { icon: <Headphones className="w-5 h-5" />, label: "Headphones" },
+                      { icon: <Monitor className="w-5 h-5" />, label: "Monitors" },
+                      { icon: <Smartphone className="w-5 h-5" />, label: "Phones" },
+                      { icon: <Cpu className="w-5 h-5" />, label: "Accessories" },
+                      { icon: <Package className="w-5 h-5" />, label: "Bundles" },
+                    ].map((cat) => (
+                      <Link
+                        key={cat.label}
+                        href="/marketplace"
+                        className="group flex flex-col items-center text-center bg-white/5 border border-white/10 rounded-2xl p-4 hover:bg-white/10 hover:border-[#f9ba48]/30 transition-all duration-200 hover:-translate-y-1"
+                      >
+                        <div className="w-10 h-10 rounded-xl bg-white/8 flex items-center justify-center text-white/50 mb-3 group-hover:bg-[#f9ba48]/20 group-hover:text-[#f9ba48] transition-all duration-200">
+                          {cat.icon}
+                        </div>
+                        <p className="font-[Montserrat] font-semibold text-white/65 text-xs group-hover:text-white transition-colors duration-200">{cat.label}</p>
+                      </Link>
+                    ))}
+                  </div>
+                  <Link
+                    href="/marketplace"
+                    className="group inline-flex items-center gap-1.5 mt-6 text-white/30 hover:text-[#f9ba48] text-xs font-[Montserrat] font-semibold transition-colors duration-200"
+                  >
+                    View all products
+                    <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
+                  </Link>
+                </div>
+
               </div>
             </div>
           </div>

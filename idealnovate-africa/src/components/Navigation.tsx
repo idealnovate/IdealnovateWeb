@@ -23,8 +23,6 @@ const learnSchools = [
     accentHover: "group-hover/school:bg-[#f9ba48]",
     courses: [
       { label: "UI/UX Design",                       href: "/learn/design-school/ui-ux-design" },
-      { label: "UX Research & Strategy with AI",     href: "/learn/design-school/ux-research" },
-      { label: "UX Portfolio Storytelling with AI",  href: "/learn/design-school/ux-portfolio" },
       { label: "Build with Framer",                  href: "/learn/design-school/build-with-framer" },
       { label: "Build with WordPress",               href: "/learn/design-school/build-with-wordpress" },
     ],
@@ -42,8 +40,8 @@ const learnSchools = [
       { label: "Python for Data Analysis",        href: "/learn/data-ai-school/python-data-analysis" },
       { label: "Tableau for Data Analysis",       href: "/learn/data-ai-school/tableau-data-analysis" },
       { label: "Microsoft Excel Mastery",         href: "/learn/data-ai-school/excel-mastery" },
-      { label: "AI Workplace Fundamentals",       href: "/learn/data-ai-school/ai-fundamentals" },
-      { label: "AI Prompting & Automations",        href: "/learn/data-ai-school/ai-agents" },
+      { label: "Generative AI for Workplace",      href: "/learn/data-ai-school/ai-fundamentals" },
+      { label: "AI Agents & Automation",             href: "/learn/data-ai-school/ai-agents" },
     ],
   },
   {
@@ -56,7 +54,8 @@ const learnSchools = [
     accentHover: "group-hover/school:bg-[#f9ba48]",
     courses: [
       { label: "Digital Advertising & Media Buying",   href: "/learn/marketing-school/digital-advertising" },
-      { label: "Content Marketing Strategy with AI",   href: "/learn/marketing-school/content-marketing" },
+      { label: "Content Creation & AI",                href: "/learn/marketing-school/content-marketing" },
+      { label: "Video Editing (Mobile & PC)",           href: "/learn/marketing-school/video-editing" },
     ],
   },
   {
@@ -69,8 +68,7 @@ const learnSchools = [
     accentHover: "group-hover/school:bg-[#266D67]",
     courses: [
       { label: "Product Management",            href: "/learn/management-school/product-management" },
-      { label: "AI Product Strategy",           href: "/learn/management-school/ai-product-strategy" },
-      { label: "Accounting Software Management",href: "/learn/management-school/accounting-software" },
+      { label: "Digital Accounting and Book-keeping",href: "/learn/management-school/accounting-software" },
     ],
   },
 ];
