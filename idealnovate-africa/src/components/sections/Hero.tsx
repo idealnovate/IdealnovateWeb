@@ -67,10 +67,10 @@ export default function Hero() {
       {/* ══════════════════════════════════════════
           SPLIT HERO  —  White left | Brand right
       ══════════════════════════════════════════ */}
-      <div className="flex-1 flex flex-col lg:grid lg:grid-cols-2">
+      <div className="flex-1 flex flex-col md:grid md:grid-cols-2">
 
         {/* ── LEFT: White panel ── */}
-        <div className="bg-white flex items-center justify-end pt-28 sm:pt-32 lg:pt-36 pb-12 lg:pb-16 px-6 sm:px-10 lg:px-12 xl:px-20">
+        <div className="bg-white flex items-center justify-end pt-28 sm:pt-32 lg:pt-36 pb-12 md:pb-16 lg:pb-16 px-6 sm:px-10 md:px-8 lg:px-12 xl:px-20">
           <div className="w-full max-w-lg">
 
             {/* Badge */}
@@ -80,7 +80,7 @@ export default function Hero() {
             </div>
 
             {/* Headline */}
-            <h1 className="font-[Montserrat] font-bold text-[#163d3a] text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl leading-[1.1] tracking-tight mb-5">
+            <h1 className="font-[Montserrat] font-bold text-[#163d3a] text-3xl sm:text-4xl lg:text-5xl xl:text-6xl leading-[1.1] tracking-tight mb-5">
               Learn the skill.
               <br />
               <span className="text-[#266D67]">Land the job.</span>
@@ -92,7 +92,7 @@ export default function Hero() {
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-3 mb-10">
+            <div className="flex flex-col sm:flex-row md:flex-col lg:flex-row gap-3 mb-10">
               <Link
                 href="/company/scholarships"
                 className="group inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-[#163d3a] text-white font-bold text-sm rounded-lg hover:bg-[#266D67] transition-all duration-200 shadow-sm font-[Montserrat]"
@@ -138,7 +138,7 @@ export default function Hero() {
         </div>
 
         {/* ── RIGHT: Brand dark panel ── */}
-        <div className="bg-[#163d3a] flex items-center justify-start relative overflow-hidden pt-8 pb-12 lg:pt-36 lg:pb-16 px-6 sm:px-10 lg:px-10 xl:px-16">
+        <div className="bg-[#163d3a] flex items-center justify-start relative overflow-hidden pt-8 pb-12 md:pt-32 md:pb-16 lg:pt-36 lg:pb-16 px-6 sm:px-10 md:px-8 lg:px-10 xl:px-16">
 
           {/* Decorative background elements */}
           <div
