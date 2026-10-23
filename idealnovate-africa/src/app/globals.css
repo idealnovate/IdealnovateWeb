@@ -149,3 +149,16 @@ p {
     padding-bottom: 7rem;
   }
 }
+
+/* Coming Soon — gold fill rising through the outlined page name */
+@keyframes cs-fill {
+  from { clip-path: inset(100% 0 0 0); }
+  to   { clip-path: inset(42% 0 0 0); }
+}
+.cs-fill {
+  clip-path: inset(42% 0 0 0);
+  animation: cs-fill 1.6s cubic-bezier(0.22, 1, 0.36, 1) 0.2s both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .cs-fill { animation: none; }
+}

@@ -31,7 +31,7 @@ const footerLinks = {
     { label: "FAQ", href: "/company/faq" },
   ],
   Resources: [
-    { label: "Blog", href: "#" },
+    { label: "Blog", href: "/resources/blog" },
     { label: "Marketplace", href: "/marketplace" },
     { label: "Career Centre", href: "#" },
     { label: "Student Projects", href: "#" },
